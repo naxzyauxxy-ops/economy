@@ -1,30 +1,112 @@
-LOCATIONS:
-  SPAWN-LOCATION: ""
-  AFK-LOCATION: ""
+SERVER-NAME: "server1"
+SERVER-REGION: "NA"
 
-AFK-SYSTEM:
-  ENABLED: true
-  TIME: 180 # In seconds (3 minutes)
-  SPAWN-CUBOID-NAME: "spawn"
-  MESSAGE: "&7You have been moved to the AFK area for being inactive in the spawn."
+# Regional Network Configuration
+# This system handles cross-proxy transfers automatically.
+# - If the target server is in the same region, a standard 'Connect' message is used.
+# - If the target is in a different region, a 'TransferPacket' is sent to the target Proxy IP.
+NETWORK:
+  REGIONS:
+    NA:
+      PROXY-IP: "na.hugster.net"
+      PROXY-PORT: 25565
+      SERVERS:
+        - "server1"
+        - "server2"
+        - "end-1"
+    EU:
+      PROXY-IP: "eu.hugster.net"
+      PROXY-PORT: 25565
+      SERVERS:
+        - "server1-EU"
+        - "server2-EU"
+        - "end-1-EU"
+    AS:
+      PROXY-IP: "as.hugster.net"
+      PROXY-PORT: 25565
+      SERVERS:
+        - "server1-AS"
+        - "server2-AS"
+        - "end-1-AS"
 
-# Settings
+BORDERS:
+  ENABLED: false
+  CENTER-X: 0.0
+  CENTER-Z: 0.0
+  COOLDOWN-SECONDS: 5
+  COOLDOWN-BARRIER: true
+  LIST:
+    border-east:
+      WORLD: "world"
+      SIDE: "EAST"
+      COORDINATE: 50000
+      TARGET-SERVER: "server2"
+    border-west:
+      WORLD: "world"
+      SIDE: "WEST"
+      COORDINATE: -50000
+      TARGET-SERVER: "server2"
+    border-north:
+      WORLD: "world"
+      SIDE: "NORTH"
+      COORDINATE: -50000
+      TARGET-SERVER: "server2"
+    border-south:
+      WORLD: "world"
+      SIDE: "SOUTH"
+      COORDINATE: 50000
+      TARGET-SERVER: "server2"
+
+PORTALS:
+  END-SERVER: "end-1"
+  NETHER-SERVER: "server2"
+  NETHER-ROUTES:
+    route1:
+      TARGET-SERVER: "server2"
+      CENTER-X: 250
+      CENTER-Z: -250
+      RADIUS: 250
+
 SETTINGS:
-  DEBUG: false
-  CHAT-FORMAT: true
-  CHAINMAIL-ON-RESPAWN: true
-  SPAWN-MENU: true
-  AFK-MENU: true
-  HOME-DEFAULT: 2 # Default slots
-  SHARDS-PER-KILL: 1
-  SHARDS-KILL-MESSAGE: "&#A303F9+{shards} Shard"
-  MONEY-PER-DEFAULT: 1000.0
-  SELL-MESSAGE: "&a+$%price%"
-  # Player Settings
-  MOB-SPAWN-RADIUS: 50
-  PHANTOM-SPAWN-RADIUS: 40
+  SYNC:
+    MASTER: true # Set to true on only ONE server to sync time/weather
+  WORTH-DEFAULT-VALUE: 1.0
+
+KEY-ALL:
+  ENABLED: true
+  EVERY: 60 # In minutes
+  COMMAND: "keymanager give %player% common 1"
+  MESSAGE:
+    - ""
+    - "&#00A4FCʏᴏᴜ ᴊᴜѕᴛ ɢᴏᴛ &21 ᴄᴏᴍᴍᴏɴ &#00A4FCᴋᴇʏ"
+    - "&#00A4FC[CLICK TO TELEPORT] &for type /warp crates to open it"
+    - ""
+
+SHARDS:
+  EVERY: 1 # In minutes
+  AMOUNT: 1 # shards
+  EVERYWHERE:
+    ENABLED: true
+    EVERY: 3
+    AMOUNT: 1
+    EXCLUDED-WORLDS:
+      - "duels"
+  BOOSTER-MULTIPLIER: 4 # Amethyst Potion
+
+RTP-ZONE:
+  ENABLED: true
+  EVERY: 30
+  TARGET-SERVER: "server2"
+  TARGET-WORLD: "world"
+  MIN-RADIUS: 500
+  MAX-RADIUS: 2000
+  CENTER-X: 0
+  CENTER-Z: 0
+  TITLE: "&#FC0000ʀᴛᴘ ᴢᴏɴᴇ"
+  SUB-TITLE: "&fTeleporting in%countdown%"
 
 CHAT-FORMAT:
+  ENABLED: true
   CHAT: "&f%prefix%%player%&7: &f%message%"
   HOVER-LORE:
     - "%prefix%%player%"
@@ -37,18 +119,6 @@ CHAT-FORMAT:
     - "&7&m----------"
     - "&7ᴄʟɪᴄᴋ ᴛᴏ ᴠɪᴇᴡ ѕᴛᴀᴛѕ"
 
-WORTH-LORE:
-  ENABLED: true
-  FORMAT: "&7Worth: &a$%price%"
-
-END-CRYSTAL:
-  ENABLED: false
-  DAMAGE: 2.0
-
-RESPAWN-ANCHOR:
-  ENABLED: false
-  DAMAGE: 2.0
-
 # Lunar client modules
 LUNAR-CLIENT:
   RICH-PRESENCE:
@@ -57,73 +127,20 @@ LUNAR-CLIENT:
     PLAYER-STATE: "Playing"
     GAME-STATE: "Playing"
     GAME-NAME: "Economy"
-    VARIANT: "%economy_username% ($%economy_nicestMoney%)"
+    VARIANT: "%voyager_username% ($%voyager_nicestMoney%)"
     WORLD-NAME: "Economy"
   TEAM-VIEW:
     ENABLED: true
     UPDATE: 20 # In ticks: 20 = 1 sec
 
-SHARDS:
-  EVERY: 1 # In minutes
-  AMOUNT: 1 # shards
-  COUNTDOWN: "&7Next shard in &#A303F9%time%s"
-  RECEIVED: "&#A303F9+%amount% Shard"
-  EVERYWHERE:
-    ENABLED: true
-    EVERY: 3
-    AMOUNT: 1
-    EXCLUDED-WORLDS:
-      - "duels"
-  BOOSTER-MULTIPLIER: 4 # Amethyst Potion
-
-KEY-ALL:
-  ENABLED: true
-  EVERY: 60 # In minutes
-  COMMANDS:
-    - ""
-  MESSAGE:
-    - ""
-    - "&aYou received a reward!"
-    - "&#ff0000Thanks for playing on our server!"
-    - ""
-
-TEAM:
-  NAME-MIN-LENGTH: 3
-  NAME-MAX-LENGTH: 5
-  LIMIT-MEMBERS: 10
-
-LEADERBOARD:
-  UPDATE: 10 # In minutes
-  NPC-REFRESH: 1 # In minutes
-
-TABLIST:
-  ENABLED: true
-  LUCKPERMS-PRIORITY: true
-  SHOW-TEAM-NAME: true
-  HEADER: "&#0069d6&lE&#0374da&lc&#067fdf&lo&#0a8be3&ln&#0d96e7&lo&#10a1ec&lm&#13acf0&ly&#17b8f4&lS&#1ac3f9&lM&#1dcefd&lP"
-  FOOTER: ""
-
-CLEAR-LAG:
-  ENABLED: true
-  EVERY: 5 # In minutes
-  ANIMALS: true
-  MONSTERS: true
-  DROPPED-ITEMS: true
-  EXCLUDED-WORLDS:
-    - "duels"
-
 COMBAT-MANAGER:
   ENABLED: true
   COOLDOWN: 16 # In seconds
-  ACTION-BAR: "&fCombat: &b${time}s"
+  ACTION-BAR: "&fCombat: &b{time}s"
   # Get combat on:
   ENDER-CRYSTAL: true
   ENDER-PEARL: true
   RESPAWN-ANCHOR: true
-  ANTI-STASIS-CHAMBER:
-    ENABLED: true
-    MAX-DISTANCE: 500
-    PREVENT-WORLD-CHANGE: true
   BLOCK-MESSAGE: "&cYou can't use this command in your current status."
   BLOCK-COMMANDS:
     - "/spawn"
@@ -134,34 +151,11 @@ COMBAT-MANAGER:
   EXCLUDED-WORLDS:
     - "duels"
 
-RTP-ZONE:
-  ENABLED: true
-  EVERY: 30 # In seconds
-  TITLE: "&c&lʀᴛᴘ ᴢᴏɴᴇ"
-  SUB-TITLE: "&fTeleporting in %countdown%"
-  WORLD:
-    NAME: "world"
-    MIN-RADIUS: 500
-    MAX-RADIUS: 2000
-
-TELEPORT-COOLDOWN:
-  HOME: 5 # In seconds
-  TEAM-HOME: 5
-  SPAWN: 5
-  AFK: 5
-  TPA: 5
-  WARP: 5
-  RTP: 5
-
-BOUNTY:
-  EXCLUDED-WORLDS:
-    - "duels"
-
 AMETHYST-TOOLS:
   EXCLUDED-WORLDS:
     - "duels"
   PICKAXE:
-    PARTICLE: 
+    PARTICLE:
       NAME: "FALLING_DUST"
       MATERIAL: "PURPLE_CONCRETE_POWDER"
       AMOUNT: 10
@@ -261,31 +255,4 @@ AMETHYST-TOOLS:
       - "&74x Shard Production for 24 hours"
       - "&8Self Destruct"
       - "&8{time}"
-    ENCHANTMENTS: []    
-
-COMMANDS:
-  BOUNTY: true
-  CUBOID: true
-  AFK: true
-  SHARDS: true
-  WARP: true
-  TEAM: true
-  BILLFORD: true
-  HOME: true # disables everything related with home commands
-  LEADERBOARDS: true
-  NIGHT-VISION: true
-  PHANTOM: true
-  RTP: true
-  SELL: true # disables everything related with sell (worth, sellhistory, etc)
-  SETTINGS: true
-  SHOP: true
-  SOCIAL: true # disables discord, twitter, media and store commands
-  SPAWN: true
-  STATS: true
-  TPA: true # disables everything related with tpa system
-  TPAUTO: true
-  RULES: true
-  HELP: true
-  SHARD_PAY: false
-  FINDPLAYER: true
-  SHARDPAY: false
+    ENCHANTMENTS: []
