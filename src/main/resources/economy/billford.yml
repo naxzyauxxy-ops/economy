@@ -2,7 +2,7 @@ CURRENT: 1
 
 COUNTDOWN:
   ENABLED: true
-  START_DATE: "2026-01-31 00:00:00"
+  START_DATE: "2026-02-5 00:00:00"
   INTERVAL_DAYS: 3 # Every how many days the billford increments.
 
 BILLFORD:
