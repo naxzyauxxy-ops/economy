@@ -1,0 +1,10 @@
+cuy-plugin/
+├── .github/
+│   └── workflows/
+│       └── build.yml   ← Auto-builds on every push
+├── src/main/
+│   ├── java/me/pi3ro/cuy/
+│   └── resources/economy/
+├── pom.xml
+├── README.md
+└── .gitignore
