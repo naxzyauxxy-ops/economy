@@ -1,18 +1,580 @@
-GLOBAL:
-  PAGE-MENU:
-    MATERIAL: "ARROW"
-    NEXT-BUTTON: "&aɴᴇxᴛ"
-    BACK-BUTTON: "&aʙᴀᴄᴋ"
-    FIRST-PAGE-BUTTON: "&aꜰɪʀѕᴛ ᴘᴀɢᴇ"
-    LAST-PAGE-BUTTON: "&aʟᴀѕᴛ ᴘᴀɢᴇ"
-    NEXT-LORE:
-      - "&fClick to go to the next page"
-    BACK-LORE:
-      - "&fClick to go to the previous page"
-    FIRST-PAGE-LORE:
-      - "&fJump to the first page"
-    LAST-PAGE-LORE:
-      - "&fJump to the last page"
+LEADERBOARDS-MENU:
+  TITLE: "&8ʟᴇᴀᴅᴇʀʙᴏᴀʀᴅѕ"
+  SIZE: 36
+  TYPE-MENU:
+    TITLE: "&8{type}"
+    SIZE: 54
+    BUTTON:
+      MATERIAL: "PLAYER_HEAD"
+      DISPLAY-NAME: "&#6BF18D{player}"
+      LORE: "&f{type}: &7{value} &#6BF18D(#{position})"
+  TYPE-NAMES:
+    money: "Money"
+    moneySpent: "Money Spent"
+    moneyMade: "Money Made"
+    kills: "Kills"
+    deaths: "Deaths"
+    playtime: "Playtime"
+    blocksPlaced: "Blocks Placed"
+    blocksBroken: "Blocks Broken"
+    mobsKilled: "Mobs Killed"
+    killStreak: "Kill Streak"
+    highestKillStreak: "Highest Kill Streak"
+    shards: "Shards"
+  BUTTONS:
+    MONEY:
+      TYPE: "money"
+      DISPLAY-NAME: "&#6BF18Dᴍᴏɴᴇʏ ʟᴇᴀᴅᴇʀʙᴏᴀʀᴅ"
+      MATERIAL: "EMERALD"
+      SLOT: 10
+      LORE:
+        - "&fClick to view ᴍᴏɴᴇʏ leaderboard"
+    SHARDS:
+      TYPE: "shards"
+      DISPLAY-NAME: "&#6BF18Dѕʜᴀʀᴅѕ ʟᴇᴀᴅᴇʀʙᴏᴀʀᴅ"
+      MATERIAL: "AMETHYST_SHARD"
+      SLOT: 11
+      LORE:
+        - "&fClick to view ѕʜᴀʀᴅѕ leaderboard"
+    KILLS:
+      TYPE: "kills"
+      DISPLAY-NAME: "&#6BF18Dᴋɪʟʟѕ ʟᴇᴀᴅᴇʀʙᴏᴀʀᴅ"
+      MATERIAL: "DIAMOND_SWORD"
+      SLOT: 12
+      LORE:
+        - "&fClick to view ᴋɪʟʟѕ leaderboard"
+    DEATHS:
+      TYPE: "deaths"
+      DISPLAY-NAME: "&#6BF18Dᴅᴇᴀᴛʜѕ ʟᴇᴀᴅᴇʀʙᴏᴀʀᴅ"
+      MATERIAL: "SKELETON_SKULL"
+      SLOT: 13
+      LORE:
+        - "&fClick to view ᴅᴇᴀᴛʜѕ leaderboard"
+    PLAYTIME:
+      TYPE: "playtime"
+      DISPLAY-NAME: "&#6BF18Dᴘʟᴀʏᴛɪᴍᴇ ʟᴇᴀᴅᴇʀʙᴏᴀʀᴅ"
+      MATERIAL: "CLOCK"
+      SLOT: 14
+      LORE:
+        - "&fClick to view ᴘʟᴀʏᴛɪᴍᴇ leaderboard"
+    BLOCKS_PLACED:
+      TYPE: "blocksPlaced"
+      DISPLAY-NAME: "&#6BF18Dʙʟᴏᴄᴋѕ ᴘʟᴀᴄᴇᴅ ʟᴇᴀᴅᴇʀʙᴏᴀʀᴅ"
+      MATERIAL: "STONE"
+      SLOT: 15
+      LORE:
+        - "&fClick to view ʙʟᴏᴄᴋѕ ᴘʟᴀᴄᴇᴅ leaderboard"
+    BLOCKS_BROKEN:
+      TYPE: "blocksBroken"
+      DISPLAY-NAME: "&#6BF18Dʙʟᴏᴄᴋѕ ʙʀᴏᴋᴇɴ ʟᴇᴀᴅᴇʀʙᴏᴀʀᴅ"
+      MATERIAL: "COBBLESTONE"
+      SLOT: 16
+      LORE:
+        - "&fClick to view ʙʟᴏᴄᴋѕ ʙʀᴏᴋᴇɴ leaderboard"
+    MOBS_KILLED:
+      TYPE: "mobsKilled"
+      DISPLAY-NAME: "&#6BF18Dᴍᴏʙѕ ᴋɪʟʟᴇᴅ ʟᴇᴀᴅᴇʀʙᴏᴀʀᴅ"
+      MATERIAL: "ZOMBIE_HEAD"
+      SLOT: 19
+      LORE:
+        - "&fClick to view ᴍᴏʙѕ ᴋɪʟʟᴇᴅ leaderboard"
+    KILL_STREAK:
+      TYPE: "killStreak"
+      DISPLAY-NAME: "&#6BF18Dᴋɪʟʟ ѕᴛʀᴇᴀᴋ ʟᴇᴀᴅᴇʀʙᴏᴀʀᴅ"
+      MATERIAL: "DIAMOND_AXE"
+      SLOT: 20
+      LORE:
+        - "&fClick to view ᴋɪʟʟ ѕᴛʀᴇᴀᴋ leaderboard"
+    HIGHEST_KILL_STREAK:
+      TYPE: "highestKillStreak"
+      DISPLAY-NAME: "&#6BF18Dʜɪɢʜᴇѕᴛ ᴋɪʟʟ ѕᴛʀᴇᴀᴋ ʟᴇᴀᴅᴇʀʙᴏᴀʀᴅ"
+      MATERIAL: "NETHERITE_SWORD"
+      SLOT: 21
+      LORE:
+        - "&fClick to view ʜɪɢʜᴇѕᴛ ᴋɪʟʟ ѕᴛʀᴇᴀᴋ leaderboard"
+    MONEY_SPENT:
+      TYPE: "moneySpent"
+      DISPLAY-NAME: "&#6BF18Dᴍᴏɴᴇʏ ѕᴘᴇɴᴛ ᴏɴ ѕʜᴏᴘ"
+      MATERIAL: "GOLD_NUGGET"
+      SLOT: 22
+      LORE:
+        - "&fClick to view ᴍᴏɴᴇʏ ѕᴘᴇɴᴛ ᴏɴ ѕʜᴏᴘ leaderboard"
+    MONEY_MADE:
+      TYPE: "moneyMade"
+      DISPLAY-NAME: "&#6BF18Dᴍᴏɴᴇʏ ᴍᴀᴅᴇ ᴏɴ /ѕᴇʟʟ"
+      MATERIAL: "IRON_NUGGET"
+      SLOT: 23
+      LORE:
+        - "&fClick to view ᴍᴏɴᴇʏ ᴍᴀᴅᴇ ᴏɴ /ѕᴇʟʟ leaderboard"
+
+SETTINGS-MENU:
+  TITLE: "&8ѕᴇᴛᴛɪɴɢѕ"
+  SIZE: 54
+  BUTTONS:
+    PAY_ALERTS:
+      DISPLAY-NAME: "&#6BF18Dᴘᴀʏ ᴀʟᴇʀᴛѕ"
+      MATERIAL: "CHERRY_SIGN"
+      SLOT: 10
+      LORE:
+        - "&fᴄᴜʀʀᴇɴᴛʟʏ: {status}"
+    HOTBAR_MESSAGES:
+      DISPLAY-NAME: "&#6BF18Dʜᴏᴛʙᴀʀ ѕᴇʀᴠᴇʀ ᴍᴇѕѕᴀɢᴇѕ"
+      MATERIAL: "CRIMSON_SIGN"
+      SLOT: 11
+      LORE:
+        - "&fᴄᴜʀʀᴇɴᴛʟʏ: {status}"
+    CLEAR_ENTITIES_MESSAGES:
+      DISPLAY-NAME: "&#6BF18Dᴄʟᴇᴀʀ ᴇɴᴛɪᴛɪᴇѕ ᴍᴇѕѕᴀɢᴇѕ"
+      MATERIAL: "BAMBOO_SIGN"
+      SLOT: 12
+      LORE:
+        - "&fᴄᴜʀʀᴇɴᴛʟʏ: {status}"
+    BOUNTY_ALERTS:
+      DISPLAY-NAME: "&#6BF18Dʙᴏᴜɴᴛʏ ᴀʟᴇʀᴛѕ"
+      MATERIAL: "WARPED_SIGN"
+      SLOT: 13
+      LORE:
+        - "&fᴄᴜʀʀᴇɴᴛʟʏ: {status}"
+    CHAINMAIL_ON_RESPAWN:
+      DISPLAY-NAME: "&#6BF18Dᴄʜᴀɪɴᴍᴀɪʟ ᴏɴ ʀᴇѕᴘᴀᴡɴ"
+      MATERIAL: "CHAINMAIL_HELMET"
+      SLOT: 19
+      LORE:
+        - "&fᴄᴜʀʀᴇɴᴛʟʏ: {status}"
+    SCOREBOARD_VISIBILITY:
+      DISPLAY-NAME: "&#6BF18Dѕᴄᴏʀᴇʙᴏᴀʀᴅ ᴠɪѕɪʙɪʟɪᴛʏ"
+      MATERIAL: "LECTERN"
+      SLOT: 20
+      LORE:
+        - "&fᴄᴜʀʀᴇɴᴛʟʏ: {status}"
+    TPA_CONFIRM_MENUS:
+      DISPLAY-NAME: "&#6BF18Dᴛᴘᴀ ᴄᴏɴꜰɪʀᴍ ᴍᴇɴᴜѕ"
+      MATERIAL: "FEATHER"
+      SLOT: 21
+      LORE:
+        - "&fᴄᴜʀʀᴇɴᴛʟʏ: {status}"
+    LUNAR_TEAMMATES:
+      DISPLAY-NAME: "&#6BF18Dʟᴜɴᴀʀ ᴛᴇᴀᴍᴍᴀᴛᴇѕ"
+      MATERIAL: "BLUE_CANDLE"
+      SLOT: 22
+      LORE:
+        - "&fᴄᴜʀʀᴇɴᴛʟʏ: {status}"
+    TPA_REQUESTS:
+      DISPLAY-NAME: "&#6BF18Dᴛᴘᴀ ʀᴇǫᴜᴇѕᴛѕ"
+      MATERIAL: "ENDER_PEARL"
+      SLOT: 23
+      LORE:
+        - "&fᴄᴜʀʀᴇɴᴛʟʏ: {status}"
+    TPA_HERE_REQUESTS:
+      DISPLAY-NAME: "&#6BF18Dᴛᴘᴀ ʜᴇʀᴇ ʀᴇǫᴜᴇѕᴛѕ"
+      MATERIAL: "ENDER_EYE"
+      SLOT: 24
+      LORE:
+        - "&fᴄᴜʀʀᴇɴᴛʟʏ: {status}"
+    TEAM_INVITES:
+      DISPLAY-NAME: "&#6BF18Dᴛᴇᴀᴍ ɪɴᴠɪᴛᴇѕ"
+      MATERIAL: "SHIELD"
+      SLOT: 25
+      LORE:
+        - "&fᴄᴜʀʀᴇɴᴛʟʏ: {status}"
+    PAYMENTS:
+      DISPLAY-NAME: "&#6BF18Dᴘᴀʏᴍᴇɴᴛѕ"
+      MATERIAL: "EMERALD"
+      SLOT: 28
+      LORE:
+        - "&fᴄᴜʀʀᴇɴᴛʟʏ: {status}"
+    TEAM_CHAT:
+      DISPLAY-NAME: "&#6BF18Dᴛᴇᴀᴍ ᴄʜᴀᴛ"
+      MATERIAL: "BELL"
+      SLOT: 29
+      LORE:
+        - "&fᴄᴜʀʀᴇɴᴛʟʏ: {status}"
+    DISABLE_MOB_SPAWN:
+      DISPLAY-NAME: "&#6BF18Dᴅɪѕᴀʙʟᴇ ᴍᴏʙ ѕᴘᴀᴡɴѕ"
+      MATERIAL: "ZOMBIE_HEAD"
+      SLOT: 30
+      LORE:
+        - "&fᴄᴜʀʀᴇɴᴛʟʏ: {status}"
+    DISABLE_PHANTOM_SPAWN:
+      DISPLAY-NAME: "&#6BF18Dᴅɪѕᴀʙʟᴇ ᴘʜᴀɴᴛᴏᴍ ѕᴘᴀᴡɴ"
+      MATERIAL: "PHANTOM_MEMBRANE"
+      SLOT: 31
+      LORE:
+        - "&fᴄᴜʀʀᴇɴᴛʟʏ: {status}"
+    PAY_CONFIRM_MENUS:
+      DISPLAY-NAME: "&#6BF18Dᴘᴀʏ ᴄᴏɴꜰɪʀᴍ ᴍᴇɴᴜѕ"
+      MATERIAL: "PAPER"
+      SLOT: 32
+      LORE:
+        - "&fᴄᴜʀʀᴇɴᴛʟʏ: {status}"
+    TP_AUTO:
+      DISPLAY-NAME: "&#6BF18Dᴛᴘ ᴀᴜᴛᴏ"
+      MATERIAL: "GOAT_HORN"
+      SLOT: 33
+      LORE:
+        - "&fᴄᴜʀʀᴇɴᴛʟʏ: {status}"
+    TOTEM_PARTICLES:
+      DISPLAY-NAME: "&#6BF18Dᴛᴏᴛᴇᴍ ᴘᴀʀᴛɪᴄʟᴇѕ"
+      MATERIAL: "TOTEM_OF_UNDYING"
+      SLOT: 38
+      LORE:
+        - "&fᴄᴜʀʀᴇɴᴛʟʏ: {status}"
+    FAST_CRYSTALS:
+      DISPLAY-NAME: "&#6BF18Dꜰᴀѕᴛ ᴄʀʏѕᴛᴀʟѕ"
+      MATERIAL: "END_CRYSTAL"
+      SLOT: 34
+      LORE:
+        - "&fᴄᴜʀʀᴇɴᴛʟʏ: {status}"
+    WORTH_DISPLAY:
+      DISPLAY-NAME: "&#6BF18Dᴡᴏʀᴛʜ ᴅɪѕᴘʟᴀʏ"
+      MATERIAL: "LIME_CANDLE"
+      SLOT: 37
+      LORE:
+        - "&fᴄᴜʀʀᴇɴᴛʟʏ: {status}"
+
+STATS-MENU:
+  TITLE: "&8{username} ѕᴛᴀᴛѕ"
+  SIZE: 36
+  BUTTONS:
+    MONEY:
+      DISPLAY-NAME: "&#6BF18Dᴍᴏɴᴇʏ"
+      MATERIAL: "EMERALD"
+      SLOT: 10
+      LORE:
+        - "&7{value}"
+    SHARDS:
+      DISPLAY-NAME: "&#6BF18Dѕʜᴀʀᴅѕ"
+      MATERIAL: "AMETHYST_SHARD"
+      SLOT: 11
+      LORE:
+        - "&7{value}"
+    KILLS:
+      DISPLAY-NAME: "&#6BF18Dᴋɪʟʟѕ"
+      MATERIAL: "DIAMOND_SWORD"
+      SLOT: 12
+      LORE:
+        - "&7{value}"
+    DEATHS:
+      DISPLAY-NAME: "&#6BF18Dᴅᴇᴀᴛʜѕ"
+      MATERIAL: "SKELETON_SKULL"
+      SLOT: 13
+      LORE:
+        - "&7{value}"
+    PLAYTIME:
+      DISPLAY-NAME: "&#6BF18Dᴘʟᴀʏᴛɪᴍᴇ"
+      MATERIAL: "CLOCK"
+      SLOT: 14
+      LORE:
+        - "&7{value}"
+    BLOCKS_PLACED:
+      DISPLAY-NAME: "&#6BF18Dʙʟᴏᴄᴋѕ ᴘʟᴀᴄᴇᴅ"
+      MATERIAL: "STONE"
+      SLOT: 15
+      LORE:
+        - "&7{value}"
+    BLOCKS_BROKEN:
+      DISPLAY-NAME: "&#6BF18Dʙʟᴏᴄᴋѕ ʙʀᴏᴋᴇɴ"
+      MATERIAL: "COBBLESTONE"
+      SLOT: 16
+      LORE:
+        - "&7{value}"
+    MOBS_KILLED:
+      DISPLAY-NAME: "&#6BF18Dᴍᴏʙѕ ᴋɪʟʟᴇᴅ"
+      MATERIAL: "ZOMBIE_HEAD"
+      SLOT: 19
+      LORE:
+        - "&7{value}"
+    KILL_STREAK:
+      DISPLAY-NAME: "&#6BF18Dᴋɪʟʟ ѕᴛʀᴇᴀᴋ"
+      MATERIAL: "DIAMOND_AXE"
+      SLOT: 20
+      LORE:
+        - "&7{value}"
+    HIGHEST_KILL_STREAK:
+      DISPLAY-NAME: "&#6BF18Dʜɪɢʜᴇѕᴛ ᴋɪʟʟ ѕᴛʀᴇᴀᴋ"
+      MATERIAL: "NETHERITE_SWORD"
+      SLOT: 21
+      LORE:
+        - "&7{value}"
+    MONEY_SPENT:
+      DISPLAY-NAME: "&#6BF18Dᴍᴏɴᴇʏ ѕᴘᴇɴᴛ ᴏɴ ѕʜᴏᴘ"
+      MATERIAL: "GOLD_NUGGET"
+      SLOT: 22
+      LORE:
+        - "&7{value}"
+    MONEY_MADE:
+      DISPLAY-NAME: "&#6BF18Dᴍᴏɴᴇʏ ᴍᴀᴅᴇ ᴏɴ /ѕᴇʟʟ"
+      MATERIAL: "IRON_NUGGET"
+      SLOT: 23
+      LORE:
+        - "&7{value}"
+
+SELL-MULTIPLIER-MENU:
+  TITLE: "&8ѕᴇʟʟ ᴍᴜʟᴛɪᴘʟɪᴇʀѕ"
+  CROPS-BUTTON:
+    MATERIAL: "WHEAT"
+    TITLE: "&#6BF18Dᴄʀᴏᴘѕ"
+    LORE:
+      - "&7Sell crops and farming materials to"
+      - "&7upgrade your sell multiplier!"
+      - ""
+      - "&7Progress to &f{next_multiplier}"
+      - "{porcentage_level} &#6BF18D{porcentage}%"
+  ORES-BUTTON:
+    MATERIAL: "DIAMOND"
+    TITLE: "&#6BF18Dᴏʀᴇѕ"
+    LORE:
+      - "&7Sell ores and mining materials to"
+      - "&7upgrade your sell multiplier!"
+      - ""
+      - "&7Progress to &f{next_multiplier}"
+      - "{porcentage_level} &#6BF18D{porcentage}%"
+  MOBS-BUTTON:
+    MATERIAL: "BONE"
+    TITLE: "&#6BF18Dᴍᴏʙѕ"
+    LORE:
+      - "&7Sell mob drops and combat materials to"
+      - "&7upgrade your sell multiplier!"
+      - ""
+      - "&7Progress to &f{next_multiplier}"
+      - "{porcentage_level} &#6BF18D{porcentage}%"
+  NATURAL-BUTTON:
+    MATERIAL: "OAK_LEAVES"
+    TITLE: "&#6BF18Dɴᴀᴛᴜʀᴀʟ ɪᴛᴇᴍѕ"
+    LORE:
+      - "&7Sell natural materials and trees to"
+      - "&7upgrade your sell multiplier!"
+      - ""
+      - "&7Progress to &f{next_multiplier}"
+      - "{porcentage_level} &#6BF18D{porcentage}%"
+  ARMOR-AND-TOOLS-BUTTON:
+    MATERIAL: "NETHERITE_HELMET"
+    TITLE: "&#6BF18Dᴀʀᴍᴏʀ ᴀɴᴅ ᴛᴏᴏʟѕ"
+    LORE:
+      - "&7Sell armor and tools to"
+      - "&7upgrade your sell multiplier!"
+      - ""
+      - "&7Progress to &f{next_multiplier}"
+      - "{porcentage_level} &#6BF18D{porcentage}%"
+  FISH-BUTTON:
+    MATERIAL: "TROPICAL_FISH"
+    TITLE: "&#6BF18Dꜰɪѕʜ"
+    LORE:
+      - "&7Sell fish and other fishing loot to"
+      - "&7upgrade your sell multiplier!"
+      - ""
+      - "&7Progress to &f{next_multiplier}"
+      - "{porcentage_level} &#6BF18D{porcentage}%"
+  BOOK-BUTTON:
+    MATERIAL: "BOOK"
+    TITLE: "&#6BF18Dᴇɴᴄʜᴀɴᴛᴇᴅ ʙᴏᴏᴋ"
+    LORE:
+      - "&7Sell books and enchanted books to"
+      - "&7upgrade your sell multiplier!"
+      - ""
+      - "&7Progress to &f{next_multiplier}"
+      - "{porcentage_level} &#6BF18D{porcentage}%"
+  POTIONS-BUTTON:
+    MATERIAL: "BREWING_STAND"
+    TITLE: "&#6BF18Dᴘᴏᴛɪᴏɴѕ"
+    LORE:
+      - "&7Sell potions and brewing materials to"
+      - "&7upgrade your sell multiplier!"
+      - ""
+      - "&7Progress to &f{next_multiplier}"
+      - "{porcentage_level} &#6BF18D{porcentage}%"
+  BLOCKS-BUTTON:
+    MATERIAL: "BRICK"
+    TITLE: "&#6BF18Dʙʟᴏᴄᴋѕ"
+    LORE:
+      - "&7Sell blocks and placeable items to"
+      - "&7upgrade your sell multiplier!"
+      - ""
+      - "&7Progress to &f{next_multiplier}"
+      - "{porcentage_level} &#6BF18D{porcentage}%"
+
+SELL-HISTORY-MENU:
+  TITLE: "&8ѕᴇʟʟ ʜɪѕᴛᴏʀʏ"
+  SIZE: 54
+  MAX-ITEMS-PER-PAGE: 45
+  BUTTONS:
+    SORT:
+      MATERIAL: "ANVIL"
+      NAME: "&aSort"
+      LORE:
+        - "&fClick to sort"
+        - ""
+        - "&7({sort_state})"
+      SLOT: 49
+    MATERIAL-ITEM:
+      LORE:
+        - "&fTotal price: &a{price}"
+        - "&fTotal amount: {amount}"
+
+PROGRESS-MENU:
+  PROGRESS-BAR: "■"
+  LEVEL: [25000, 150000, 500000, 1000000, 5000000, 25000000, 250000000, 550000000, 850000000,
+          1000000000, 2000000000, 4000000000, 8000000000, 10000000000, 20000000000, 40000000000,
+          80000000000, 160000000000, 320000000000, 640000000000]
+  TITLE:
+    CROPS: "&8ᴄʀᴏᴘѕ ᴘʀᴏɢʀᴇѕѕ"
+    ORES: "&8ᴏʀᴇ ᴘʀᴏɢʀᴇѕѕ"
+    MOBS: "&8ᴍᴏʙ ᴅʀᴏᴘѕ ᴘʀᴏɢʀᴇѕѕ"
+    NATURAL: "&8ɴᴀᴛᴜʀᴀʟ ɪᴛᴇᴍѕ ᴘʀᴏɢʀᴇѕѕ"
+    ARMOR_AND_TOOLS: "&8ᴀʀᴍᴏʀ ᴀɴᴅ ᴛᴏᴏʟѕ ᴘʀᴏɢʀᴇѕѕ"
+    FISH: "&8ꜰɪѕʜ ᴘʀᴏɢʀᴇѕѕ"
+    BOOK: "&8ᴇɴᴄʜᴀɴᴛᴇᴅ ʙᴏᴏᴋ ᴘʀᴏɢʀᴇѕѕ"
+    POTIONS: "&8ᴘᴏᴛɪᴏɴѕ ᴘʀᴏɢʀᴇѕѕ"
+    BLOCKS: "&8ʙʟᴏᴄᴋѕ ᴘʀᴏɢʀᴇѕѕ"
+  TYPE-BUTTON:
+    TITLE:
+      CROPS: "&#6BF18Dᴄʀᴏᴘѕ"
+      ORES: "&#6BF18Dᴏʀᴇ"
+      MOBS: "&#6BF18Dᴍᴏʙ"
+      NATURAL: "&#6BF18Dɴᴀᴛᴜʀᴀʟ ɪᴛᴇᴍѕ"
+      ARMOR_AND_TOOLS: "&#6BF18Dᴀʀᴍᴏʀ ᴀɴᴅ ᴛᴏᴏʟѕ"
+      FISH: "&#6BF18Dꜰɪѕʜ"
+      BOOK: "&#6BF18Dᴇɴᴄʜᴀɴᴛᴇᴅ ʙᴏᴏᴋ"
+      POTIONS: "&#6BF18Dᴘᴏᴛɪᴏɴѕ"
+      BLOCKS: "&#6BF18Dʙʟᴏᴄᴋѕ"
+    LORE:
+      CROPS:
+        - "&7Sell crops and farming materials to"
+        - "&7upgrade your sell multiplier!"
+      ORES:
+        - "&7Sell ores and mining materials to"
+        - "&7upgrade your sell multiplier!"
+      MOBS:
+        - "&7Sell mob drops and combat materials to"
+        - "&7upgrade your sell multiplier!"
+      NATURAL:
+        - "&7Sell natural materials and trees to"
+        - "&7upgrade your sell multiplier!"
+      ARMOR_AND_TOOLS:
+        - "&7Sell armor and tools to"
+        - "&7upgrade your sell multiplier!"
+      FISH:
+        - "&7Sell fish and other fishing loot to"
+        - "&7upgrade your sell multiplier!"
+      BOOK:
+        - "&7Sell books and enchanted books to"
+        - "&7upgrade your sell multiplier!"
+      POTIONS:
+        - "&7Sell potions and brewing materials to"
+        - "&7upgrade your sell multiplier!"
+      BLOCKS:
+        - "&7Sell blocks and placeable items to"
+        - "&7upgrade your sell multiplier!"
+    MATERIAL:
+      CROPS: "WHEAT"
+      ORES: "DIAMOND"
+      MOBS: "BONE"
+      NATURAL: "OAK_LEAVES"
+      ARMOR_AND_TOOLS: "NETHERITE_HELMET"
+      FISH: "TROPICAL_FISH"
+      BOOK: "BOOK"
+      POTIONS: "BREWING_STAND"
+      BLOCKS: "BRICK"
+  WORKING-BUTTON:
+    TITLE: "&eᴡᴏʀᴋɪɴɢ"
+    MATERIAL: "YELLOW_STAINED_GLASS_PANE"
+    LORE:
+      - "{porcentage_level} &f{next_multiplier} {porcentage}%"
+      - "&7{current_earned}/{next_goal}"
+  COMPLETED-BUTTON:
+    TITLE: "&aᴄᴏᴍᴘʟᴇᴛᴇᴅ"
+    MATERIAL: "LIME_STAINED_GLASS_PANE"
+    LORE:
+      - "{porcentage_level} &f{next_multiplier} {porcentage}%"
+      - "&7{current_earned}/{next_goal}"
+
+BILLFORD-MENU:
+  TITLE: "&8ʙɪʟʟꜰᴏʀᴅ"
+  SIZE: 54
+  TRADE-BUTTON:
+    MATERIAL:
+      NAME: "&aTrade with Billford"
+      LORE:
+        - ""
+  CONFIRM-TRADE-BUTTON:
+    MATERIAL: "HOPPER"
+    NAME: "&8ᴛʀᴀᴅᴇ"
+    LORE:
+      - "&fClick to confirm the trade"
+      - ""
+      - "&7(you need the items in your inventory)"
+
+HOME-MENU:
+  TITLE: "&8ʜᴏᴍᴇѕ"
+  SIZE: 36
+  TEAM_HOME:
+    TELEPORT:
+      MATERIALS:
+        NO_TEAM: "RED_BANNER"
+        NO_HOME: "WHITE_BANNER"
+        HAS_HOME: "WHITE_BANNER"
+      DISPLAY_NAME:
+        NO_TEAM: "&cᴛᴇᴀᴍ ʜᴏᴍᴇ"
+        NO_HOME: "&cᴛᴇᴀᴍ ʜᴏᴍᴇ"
+        HAS_HOME: "&bᴛᴇᴀᴍ ʜᴏᴍᴇ"
+      LORE:
+        NO_TEAM: "&fYou don't have a team."
+        NO_HOME: "&fClick to create a team home."
+        HAS_HOME: "&fClick to teleport to your team's home."
+    SAVE:
+      MATERIALS:
+        NO_TEAM: "RED_DYE"
+        NO_HOME: "GRAY_DYE"
+        HAS_HOME: "BLUE_DYE"
+      DISPLAY_NAME:
+        NO_TEAM: "&cᴛᴇᴀᴍ ʜᴏᴍᴇ"
+        NO_HOME: "&cᴛᴇᴀᴍ ʜᴏᴍᴇ"
+        HAS_HOME: "&bᴛᴇᴀᴍ ʜᴏᴍᴇ"
+      LORE:
+        NO_TEAM: "&fYou don't have a team."
+        NO_HOME: "&fClick to create a team home."
+        HAS_HOME: "&fClick to teleport to your team's home."
+  SLOTS:
+    TEAM_HOME_TELEPORT: 10
+    TEAM_HOME_SAVE: 19
+    HOMES_TELEPORT:
+      1: 12
+      2: 13
+      3: 14
+      4: 15
+      5: 16
+    HOMES_CREATE:
+      1: 21
+      2: 22
+      3: 23
+      4: 24
+      5: 25
+  HOME_BUTTON_TELEPORT:
+    DISPLAY-NAME:
+      NO-USED: "&7ɴᴏ ʜᴏᴍᴇ ѕᴇᴛ"
+      USED: "&bʜᴏᴍᴇ {id}"
+      NO-PERMISSION: "&cɴᴏ ᴘᴇʀᴍɪѕѕɪᴏɴ"
+    LORE:
+      NO-USED: "&f- Click to create a home"
+      USED: "&fClick to teleport to your home"
+      NO-PERMISSION: "&fYou need a higher rank for this home"
+    MATERIALS:
+      NO-USED: "LIGHT_GRAY_BED"
+      USED: "LIGHT_BLUE_BED"
+      NO-PERMISSION: "RED_BED"
+  HOME_BUTTON_CREATE:
+    DISPLAY-NAME:
+      NO-USED: "&7ɴᴏ ʜᴏᴍᴇ ѕᴇᴛ"
+      USED: "&bʜᴏᴍᴇ {id}"
+      NO-PERMISSION: "&cɴᴏ ᴘᴇʀᴍɪѕѕɪᴏɴ"
+    LORE:
+      NO-USED: "&f- Click to create a home"
+      USED: "&fClick to delete this home"
+      NO-PERMISSION: "&fYou need a higher rank for this home"
+    MATERIALS:
+      NO-USED: "GRAY_DYE"
+      USED: "BLUE_DYE"
+      NO-PERMISSION: "RED_DYE"
 
 TEAM-MENUS:
   TEAM:
@@ -156,652 +718,22 @@ TEAM-MENUS:
       LORE:
         - "&fClick to confirm"
 
-HOME-MENU:
-  TITLE: "&8ʜᴏᴍᴇѕ"
-  SIZE: 36
-  TELEPORT-USED-MATERIAL: "LIGHT_BLUE_BED"
-  TELEPORT-NO-USED-MATERIAL: "LIGHT_GRAY_BED"
-  TELEPORT-NO-PERMISSION-MATERIAL: "RED_BED"
-  CREATE-USED-MATERIAL: "BLUE_DYE"
-  CREATE-NO-USED-MATERIAL: "GRAY_DYE"
-  CREATE-NO-PERMISSION-MATERIAL: "RED_DYE"
-  TEAM_HOME:
-    TELEPORT:
-      MATERIALS:
-        NO_TEAM: "RED_BANNER"
-        NO_HOME: "WHITE_BANNER"
-        HAS_HOME: "WHITE_BANNER"
-      DISPLAY_NAME:
-        NO_TEAM: "&cᴛᴇᴀᴍ ʜᴏᴍᴇ"
-        NO_HOME: "&cᴛᴇᴀᴍ ʜᴏᴍᴇ"
-        HAS_HOME: "&bᴛᴇᴀᴍ ʜᴏᴍᴇ"
-      LORE:
-        NO_TEAM: "&fYou don't have a team."
-        NO_HOME: "&fClick to create a team home."
-        HAS_HOME: "&fClick to teleport to your team's home."
-    SAVE:
-      MATERIALS:
-        NO_TEAM: "RED_DYE"
-        NO_HOME: "GRAY_DYE"
-        HAS_HOME: "BLUE_DYE"
-      DISPLAY_NAME:
-        NO_TEAM: "&cᴛᴇᴀᴍ ʜᴏᴍᴇ"
-        NO_HOME: "&cᴛᴇᴀᴍ ʜᴏᴍᴇ"
-        HAS_HOME: "&bᴛᴇᴀᴍ ʜᴏᴍᴇ"
-      LORE:
-        NO_TEAM: "&fYou don't have a team."
-        NO_HOME: "&fClick to create a team home."
-        HAS_HOME: "&fClick to teleport to your team's home."
-  TELEPORT:
-    HOME-1:
-      DISPLAY-NAME:
-        NO-USED: "&7ɴᴏ ʜᴏᴍᴇ ѕᴇᴛ"
-        USED: "&bʜᴏᴍᴇ 1"
-        NO-PERMISSION: "&cɴᴏ ᴘᴇʀᴍɪѕѕɪᴏɴ"
-      LORE:
-        NO-USED: "&f- Click to create a home"
-        USED: "&fClick to teleport to your home"
-        NO-PERMISSION: "&fYou need a higher rank for this home"
-    HOME-2:
-      DISPLAY-NAME:
-        NO-USED: "&7ɴᴏ ʜᴏᴍᴇ ѕᴇᴛ"
-        USED: "&bʜᴏᴍᴇ 2"
-        NO-PERMISSION: "&cɴᴏ ᴘᴇʀᴍɪѕѕɪᴏɴ"
-      LORE:
-        NO-USED: "&f- Click to create a home"
-        USED: "&fClick to teleport to your home"
-        NO-PERMISSION: "&fYou need a higher rank for this home"
-    HOME-3:
-      DISPLAY-NAME:
-        NO-USED: "&7ɴᴏ ʜᴏᴍᴇ ѕᴇᴛ"
-        USED: "&bʜᴏᴍᴇ 3"
-        NO-PERMISSION: "&cɴᴏ ᴘᴇʀᴍɪѕѕɪᴏɴ"
-      LORE:
-        NO-USED: "&f- Click to create a home"
-        USED: "&fClick to teleport to your home"
-        NO-PERMISSION: "&fYou need a higher rank for this home"
-    HOME-4:
-      DISPLAY-NAME:
-        NO-USED: "&7ɴᴏ ʜᴏᴍᴇ ѕᴇᴛ"
-        USED: "&bʜᴏᴍᴇ 4"
-        NO-PERMISSION: "&cɴᴏ ᴘᴇʀᴍɪѕѕɪᴏɴ"
-      LORE:
-        NO-USED: "&f- Click to create a home"
-        USED: "&fClick to teleport to your home"
-        NO-PERMISSION: "&fYou need a higher rank for this home"
-    HOME-5:
-      DISPLAY-NAME:
-        NO-USED: "&7ɴᴏ ʜᴏᴍᴇ ѕᴇᴛ"
-        USED: "&bʜᴏᴍᴇ 5"
-        NO-PERMISSION: "&cɴᴏ ᴘᴇʀᴍɪѕѕɪᴏɴ"
-      LORE:
-        NO-USED: "&f- Click to create a home"
-        USED: "&fClick to teleport to your home"
-        NO-PERMISSION: "&fYou need a higher rank for this home"
-  CREATE:
-    HOME-1:
-      DISPLAY-NAME:
-        NO-USED: "&7ɴᴏ ʜᴏᴍᴇ ѕᴇᴛ"
-        USED: "&bʜᴏᴍᴇ 1"
-        NO-PERMISSION: "&cɴᴏ ᴘᴇʀᴍɪѕѕɪᴏɴ"
-      LORE:
-        NO-USED: "&f- Click to create a home"
-        USED: "&fClick to delete this home"
-        NO-PERMISSION: "&fYou need a higher rank for this home"
-    HOME-2:
-      DISPLAY-NAME:
-        NO-USED: "&7ɴᴏ ʜᴏᴍᴇ ѕᴇᴛ"
-        USED: "&bʜᴏᴍᴇ 2"
-        NO-PERMISSION: "&cɴᴏ ᴘᴇʀᴍɪѕѕɪᴏɴ"
-      LORE:
-        NO-USED: "&f- Click to create a home"
-        USED: "&fClick to delete this home"
-        NO-PERMISSION: "&fYou need a higher rank for this home"
-    HOME-3:
-      DISPLAY-NAME:
-        NO-USED: "&7ɴᴏ ʜᴏᴍᴇ ѕᴇᴛ"
-        USED: "&bʜᴏᴍᴇ 3"
-        NO-PERMISSION: "&cɴᴏ ᴘᴇʀᴍɪѕѕɪᴏɴ"
-      LORE:
-        NO-USED: "&f- Click to create a home"
-        USED: "&fClick to delete this home"
-        NO-PERMISSION: "&fYou need a higher rank for this home"
-    HOME-4:
-      DISPLAY-NAME:
-        NO-USED: "&7ɴᴏ ʜᴏᴍᴇ ѕᴇᴛ"
-        USED: "&bʜᴏᴍᴇ 4"
-        NO-PERMISSION: "&cɴᴏ ᴘᴇʀᴍɪѕѕɪᴏɴ"
-      LORE:
-        NO-USED: "&f- Click to create a home"
-        USED: "&fClick to delete this home"
-        NO-PERMISSION: "&fYou need a higher rank for this home"
-    HOME-5:
-      DISPLAY-NAME:
-        NO-USED: "&7ɴᴏ ʜᴏᴍᴇ ѕᴇᴛ"
-        USED: "&bʜᴏᴍᴇ 5"
-        NO-PERMISSION: "&cɴᴏ ᴘᴇʀᴍɪѕѕɪᴏɴ"
-      LORE:
-        NO-USED: "&f- Click to create a home"
-        USED: "&fClick to delete this home"
-        NO-PERMISSION: "&fYou need a higher rank for this home"
-
-CONFIRM-MENU:
-  TITLE: "&8Confirm Delete"
+PAY-CONFIRM-MENU:
+  TITLE: "&8ᴄᴏɴꜰɪʀᴍ ᴘᴀʏᴍᴇɴᴛ"
   SIZE: 27
   CONFIRM-BUTTON:
-    DISPLAY-NAME: "&aᴄᴏɴꜰɪʀᴍ"
+    TITLE: "&#00FC00ᴄᴏɴꜰɪʀᴍ"
     MATERIAL: "LIME_STAINED_GLASS_PANE"
     LORE:
-      - "&fClick to delete"
+      - "&7Click to confirm to pay {amount}!"
   CANCEL-BUTTON:
-    DISPLAY-NAME: "&4ᴄᴀɴᴄᴇʟ"
+    TITLE: "&#FC0000ᴄᴀɴᴄᴇʟ"
     MATERIAL: "RED_STAINED_GLASS_PANE"
     LORE:
-      - "&fClick to cancel"
-      -
-
-MEDIA-MENU:
-  TITLE: "&8ᴍᴇᴅɪᴀ ʀᴀɴᴋ"
-  SIZE: 27
-  MEDIA-BUTTON:
-    DISPLAY-NAME: "&dᴍᴇᴅɪᴀ ʀᴀɴᴋ"
-    MATERIAL: "PINK_DYE"
-    SLOT: 13
-    LORE:
-      - "&dRequirements: (only one needed)"
-      - "&d- &f25 average viewers on Stream"
-      - "&d- &f5k views on a YouTube Video"
-      - "&d- &f25k views on a TikTok"
-      - "&d- &f50k views on YouTube Short"
-      - ""
-      - "&dReminders:"
-      - "&8- &7Must have the IP on screen"
-      - "&8- &7Must be from the new season"
-      - "&8- &7Create ticket in discord for the rank"
-      - "&8- &7It lasts 90 days and has all top ranks perks"
-      - ""
-
-STATS-MENU:
-  TITLE: "&8{username} ѕᴛᴀᴛѕ"
-  SIZE: 36
-  BUTTONS:
-    MONEY:
-      DISPLAY-NAME: "&#6BF18Dᴍᴏɴᴇʏ"
-      MATERIAL: "EMERALD"
-      SLOT: 10
-      LORE:
-        - "&7{value}"
-    SHARDS:
-      DISPLAY-NAME: "&#6BF18Dѕʜᴀʀᴅѕ"
-      MATERIAL: "AMETHYST_SHARD"
-      SLOT: 11
-      LORE:
-        - "&7{value}"
-    KILLS:
-      DISPLAY-NAME: "&#6BF18Dᴋɪʟʟѕ"
-      MATERIAL: "DIAMOND_SWORD"
-      SLOT: 12
-      LORE:
-        - "&7{value}"
-    DEATHS:
-      DISPLAY-NAME: "&#6BF18Dᴅᴇᴀᴛʜѕ"
-      MATERIAL: "SKELETON_SKULL"
-      SLOT: 13
-      LORE:
-        - "&7{value}"
-    PLAYTIME:
-      DISPLAY-NAME: "&#6BF18Dᴘʟᴀʏᴛɪᴍᴇ"
-      MATERIAL: "CLOCK"
-      SLOT: 14
-      LORE:
-        - "&7{value}"
-    BLOCKS_PLACED:
-      DISPLAY-NAME: "&#6BF18Dʙʟᴏᴄᴋѕ ᴘʟᴀᴄᴇᴅ"
-      MATERIAL: "STONE"
-      SLOT: 15
-      LORE:
-        - "&7{value}"
-    BLOCKS_BROKEN:
-      DISPLAY-NAME: "&#6BF18Dʙʟᴏᴄᴋѕ ʙʀᴏᴋᴇɴ"
-      MATERIAL: "COBBLESTONE"
-      SLOT: 16
-      LORE:
-        - "&7{value}"
-    MOBS_KILLED:
-      DISPLAY-NAME: "&#6BF18Dᴍᴏʙѕ ᴋɪʟʟᴇᴅ"
-      MATERIAL: "ZOMBIE_HEAD"
-      SLOT: 19
-      LORE:
-        - "&7{value}"
-    KILL_STREAK:
-      DISPLAY-NAME: "&#6BF18Dᴋɪʟʟ ѕᴛʀᴇᴀᴋ"
-      MATERIAL: "DIAMOND_AXE"
-      SLOT: 20
-      LORE:
-        - "&7{value}"
-    HIGHEST_KILL_STREAK:
-      DISPLAY-NAME: "&#6BF18Dʜɪɢʜᴇѕᴛ ᴋɪʟʟ ѕᴛʀᴇᴀᴋ"
-      MATERIAL: "NETHERITE_SWORD"
-      SLOT: 21
-      LORE:
-        - "&7{value}"
-    MONEY_SPENT:
-      DISPLAY-NAME: "&#6BF18Dᴍᴏɴᴇʏ ѕᴘᴇɴᴛ ᴏɴ ѕʜᴏᴘ"
-      MATERIAL: "GOLD_NUGGET"
-      SLOT: 22
-      LORE:
-        - "&7{value}"
-    MONEY_MADE:
-      DISPLAY-NAME: "&#6BF18Dᴍᴏɴᴇʏ ᴍᴀᴅᴇ ᴏɴ /ѕᴇʟʟ"
-      MATERIAL: "IRON_NUGGET"
-      SLOT: 23
-      LORE:
-        - "&7{value}"
-
-SETTINGS-MENU:
-  TITLE: "&8ѕᴇᴛᴛɪɴɢѕ"
-  SIZE: 54
-  BUTTONS:
-    PAY_ALERTS:
-      DISPLAY-NAME: "&#6BF18Dᴘᴀʏ ᴀʟᴇʀᴛѕ"
-      MATERIAL: "CHERRY_SIGN"
-      SLOT: 10
-      LORE:
-        - "&fᴄᴜʀʀᴇɴᴛʟʏ: {status}"
-    HOTBAR_MESSAGES:
-      DISPLAY-NAME: "&#6BF18Dʜᴏᴛʙᴀʀ ѕᴇʀᴠᴇʀ ᴍᴇѕѕᴀɢᴇѕ"
-      MATERIAL: "CRIMSON_SIGN"
-      SLOT: 11
-      LORE:
-        - "&fᴄᴜʀʀᴇɴᴛʟʏ: {status}"
-    CLEAR_ENTITIES_MESSAGES:
-      DISPLAY-NAME: "&#6BF18Dᴄʟᴇᴀʀ ᴇɴᴛɪᴛɪᴇѕ ᴍᴇѕѕᴀɢᴇѕ"
-      MATERIAL: "BAMBOO_SIGN"
-      SLOT: 12
-      LORE:
-        - "&fᴄᴜʀʀᴇɴᴛʟʏ: {status}"
-    BOUNTY_ALERTS:
-      DISPLAY-NAME: "&#6BF18Dʙᴏᴜɴᴛʏ ᴀʟᴇʀᴛѕ"
-      MATERIAL: "WARPED_SIGN"
-      SLOT: 13
-      LORE:
-        - "&fᴄᴜʀʀᴇɴᴛʟʏ: {status}"
-    CHAINMAIL_ON_RESPAWN:
-      DISPLAY-NAME: "&#6BF18Dᴄʜᴀɪɴᴍᴀɪʟ ᴏɴ ʀᴇѕᴘᴀᴡɴ"
-      MATERIAL: "CHAINMAIL_HELMET"
-      SLOT: 19
-      LORE:
-        - "&fᴄᴜʀʀᴇɴᴛʟʏ: {status}"
-    SCOREBOARD_VISIBILITY:
-      DISPLAY-NAME: "&#6BF18Dѕᴄᴏʀᴇʙᴏᴀʀᴅ ᴠɪѕɪʙɪʟɪᴛʏ"
-      MATERIAL: "LECTERN"
-      SLOT: 20
-      LORE:
-        - "&fᴄᴜʀʀᴇɴᴛʟʏ: {status}"
-    TPA_CONFIRM_MENUS:
-      DISPLAY-NAME: "&#6BF18Dᴛᴘᴀ ᴄᴏɴꜰɪʀᴍ ᴍᴇɴᴜѕ"
-      MATERIAL: "FEATHER"
-      SLOT: 21
-      LORE:
-        - "&fᴄᴜʀʀᴇɴᴛʟʏ: {status}"
-    LUNAR_TEAMMATES:
-      DISPLAY-NAME: "&#6BF18Dʟᴜɴᴀʀ ᴛᴇᴀᴍᴍᴀᴛᴇѕ"
-      MATERIAL: "BLUE_CANDLE"
-      SLOT: 22
-      LORE:
-        - "&fᴄᴜʀʀᴇɴᴛʟʏ: {status}"
-    TPA_REQUESTS:
-      DISPLAY-NAME: "&#6BF18Dᴛᴘᴀ ʀᴇǫᴜᴇѕᴛѕ"
-      MATERIAL: "ENDER_PEARL"
-      SLOT: 23
-      LORE:
-        - "&fᴄᴜʀʀᴇɴᴛʟʏ: {status}"
-    TPA_HERE_REQUESTS:
-      DISPLAY-NAME: "&#6BF18Dᴛᴘᴀ ʜᴇʀᴇ ʀᴇǫᴜᴇѕᴛѕ"
-      MATERIAL: "ENDER_EYE"
-      SLOT: 24
-      LORE:
-        - "&fᴄᴜʀʀᴇɴᴛʟʏ: {status}"
-    TEAM_INVITES:
-      DISPLAY-NAME: "&#6BF18Dᴛᴇᴀᴍ ɪɴᴠɪᴛᴇѕ"
-      MATERIAL: "SHIELD"
-      SLOT: 25
-      LORE:
-        - "&fᴄᴜʀʀᴇɴᴛʟʏ: {status}"
-    PAYMENTS:
-      DISPLAY-NAME: "&#6BF18Dᴘᴀʏᴍᴇɴᴛѕ"
-      MATERIAL: "EMERALD"
-      SLOT: 28
-      LORE:
-        - "&fᴄᴜʀʀᴇɴᴛʟʏ: {status}"
-    TEAM_CHAT:
-      DISPLAY-NAME: "&#6BF18Dᴛᴇᴀᴍ ᴄʜᴀᴛ"
-      MATERIAL: "BELL"
-      SLOT: 29
-      LORE:
-        - "&fᴄᴜʀʀᴇɴᴛʟʏ: {status}"
-    DISABLE_MOB_SPAWN:
-      DISPLAY-NAME: "&#6BF18Dᴅɪѕᴀʙʟᴇ ᴍᴏʙ ѕᴘᴀᴡɴѕ"
-      MATERIAL: "ZOMBIE_HEAD"
-      SLOT: 30
-      LORE:
-        - "&fᴄᴜʀʀᴇɴᴛʟʏ: {status}"
-    DISABLE_PHANTOM_SPAWN:
-      DISPLAY-NAME: "&#6BF18Dᴅɪѕᴀʙʟᴇ ᴘʜᴀɴᴛᴏᴍ ѕᴘᴀᴡɴ"
-      MATERIAL: "PHANTOM_MEMBRANE"
-      SLOT: 31
-      LORE:
-        - "&fᴄᴜʀʀᴇɴᴛʟʏ: {status}"
-    PAY_CONFIRM_MENUS:
-      DISPLAY-NAME: "&#6BF18Dᴘᴀʏ ᴄᴏɴꜰɪʀᴍ ᴍᴇɴᴜѕ"
-      MATERIAL: "PAPER"
-      SLOT: 32
-      LORE:
-        - "&fᴄᴜʀʀᴇɴᴛʟʏ: {status}"
-    TP_AUTO:
-      DISPLAY-NAME: "&#6BF18Dᴛᴘ ᴀᴜᴛᴏ"
-      MATERIAL: "GOAT_HORN"
-      SLOT: 33
-      LORE:
-        - "&fᴄᴜʀʀᴇɴᴛʟʏ: {status}"
-    TOTEM_PARTICLES:
-      DISPLAY-NAME: "&#6BF18Dᴛᴏᴛᴇᴍ ᴘᴀʀᴛɪᴄʟᴇѕ"
-      MATERIAL: "TOTEM_OF_UNDYING"
-      SLOT: 38
-      LORE:
-        - "&fᴄᴜʀʀᴇɴᴛʟʏ: {status}"
-    FAST_CRYSTALS:
-      DISPLAY-NAME: "&#6BF18Dꜰᴀѕᴛ ᴄʀʏѕᴛᴀʟѕ"
-      MATERIAL: "END_CRYSTAL"
-      SLOT: 34
-      LORE:
-        - "&fᴄᴜʀʀᴇɴᴛʟʏ: {status}"
-    WORTH_DISPLAY:
-      DISPLAY-NAME: "&#6BF18Dᴡᴏʀᴛʜ ᴅɪѕᴘʟᴀʏ"
-      MATERIAL: "LIME_CANDLE"
-      SLOT: 37
-      LORE:
-        - "&fᴄᴜʀʀᴇɴᴛʟʏ: {status}"
-
-LEADERBOARDS-MENU:
-  TITLE: "&8ʟᴇᴀᴅᴇʀʙᴏᴀʀᴅѕ"
-  SIZE: 36
-  TYPE-MENU:
-    TITLE: "&8{type}"
-    SIZE: 54
-    BUTTON:
-      MATERIAL: "PLAYER_HEAD"
-      DISPLAY-NAME: "&#6BF18D{player}"
-      LORE: "&f{type}: &7{value} &#6BF18D(#{position})"
-  TYPE-NAMES:
-    money: "Money"
-    moneySpent: "Money Spent"
-    moneyMade: "Money Made"
-    kills: "Kills"
-    deaths: "Deaths"
-    playtime: "Playtime"
-    blocksPlaced: "Blocks Placed"
-    blocksBroken: "Blocks Broken"
-    mobsKilled: "Mobs Killed"
-    killStreak: "Kill Streak"
-    highestKillStreak: "Highest Kill Streak"
-    shards: "Shards"
-  BUTTONS:
-    MONEY:
-      TYPE: "money"
-      DISPLAY-NAME: "&#6BF18Dᴍᴏɴᴇʏ ʟᴇᴀᴅᴇʀʙᴏᴀʀᴅ"
-      MATERIAL: "EMERALD"
-      SLOT: 10
-      LORE:
-        - "&fClick to view ᴍᴏɴᴇʏ leaderboard"
-    SHARDS:
-      TYPE: "shards"
-      DISPLAY-NAME: "&#6BF18Dѕʜᴀʀᴅѕ ʟᴇᴀᴅᴇʀʙᴏᴀʀᴅ"
-      MATERIAL: "AMETHYST_SHARD"
-      SLOT: 11
-      LORE:
-        - "&fClick to view ѕʜᴀʀᴅѕ leaderboard"
-    KILLS:
-      TYPE: "kills"
-      DISPLAY-NAME: "&#6BF18Dᴋɪʟʟѕ ʟᴇᴀᴅᴇʀʙᴏᴀʀᴅ"
-      MATERIAL: "DIAMOND_SWORD"
-      SLOT: 12
-      LORE:
-        - "&fClick to view ᴋɪʟʟѕ leaderboard"
-    DEATHS:
-      TYPE: "deaths"
-      DISPLAY-NAME: "&#6BF18Dᴅᴇᴀᴛʜѕ ʟᴇᴀᴅᴇʀʙᴏᴀʀᴅ"
-      MATERIAL: "SKELETON_SKULL"
-      SLOT: 13
-      LORE:
-        - "&fClick to view ᴅᴇᴀᴛʜѕ leaderboard"
-    PLAYTIME:
-      TYPE: "playtime"
-      DISPLAY-NAME: "&#6BF18Dᴘʟᴀʏᴛɪᴍᴇ ʟᴇᴀᴅᴇʀʙᴏᴀʀᴅ"
-      MATERIAL: "CLOCK"
-      SLOT: 14
-      LORE:
-        - "&fClick to view ᴘʟᴀʏᴛɪᴍᴇ leaderboard"
-    BLOCKS_PLACED:
-      TYPE: "blocksPlaced"
-      DISPLAY-NAME: "&#6BF18Dʙʟᴏᴄᴋѕ ᴘʟᴀᴄᴇᴅ ʟᴇᴀᴅᴇʀʙᴏᴀʀᴅ"
-      MATERIAL: "STONE"
-      SLOT: 15
-      LORE:
-        - "&fClick to view ʙʟᴏᴄᴋѕ ᴘʟᴀᴄᴇᴅ leaderboard"
-    BLOCKS_BROKEN:
-      TYPE: "blocksBroken"
-      DISPLAY-NAME: "&#6BF18Dʙʟᴏᴄᴋѕ ʙʀᴏᴋᴇɴ ʟᴇᴀᴅᴇʀʙᴏᴀʀᴅ"
-      MATERIAL: "COBBLESTONE"
-      SLOT: 16
-      LORE:
-        - "&fClick to view ʙʟᴏᴄᴋѕ ʙʀᴏᴋᴇɴ leaderboard"
-    MOBS_KILLED:
-      TYPE: "mobsKilled"
-      DISPLAY-NAME: "&#6BF18Dᴍᴏʙѕ ᴋɪʟʟᴇᴅ ʟᴇᴀᴅᴇʀʙᴏᴀʀᴅ"
-      MATERIAL: "ZOMBIE_HEAD"
-      SLOT: 19
-      LORE:
-        - "&fClick to view ᴍᴏʙѕ ᴋɪʟʟᴇᴅ leaderboard"
-    KILL_STREAK:
-      TYPE: "killStreak"
-      DISPLAY-NAME: "&#6BF18Dᴋɪʟʟ ѕᴛʀᴇᴀᴋ ʟᴇᴀᴅᴇʀʙᴏᴀʀᴅ"
-      MATERIAL: "DIAMOND_AXE"
-      SLOT: 20
-      LORE:
-        - "&fClick to view ᴋɪʟʟ ѕᴛʀᴇᴀᴋ leaderboard"
-    HIGHEST_KILL_STREAK:
-      TYPE: "highestKillStreak"
-      DISPLAY-NAME: "&#6BF18Dʜɪɢʜᴇѕᴛ ᴋɪʟʟ ѕᴛʀᴇᴀᴋ ʟᴇᴀᴅᴇʀʙᴏᴀʀᴅ"
-      MATERIAL: "NETHERITE_SWORD"
-      SLOT: 21
-      LORE:
-        - "&fClick to view ʜɪɢʜᴇѕᴛ ᴋɪʟʟ ѕᴛʀᴇᴀᴋ leaderboard"
-    MONEY_SPENT:
-      TYPE: "moneySpent"
-      DISPLAY-NAME: "&#6BF18Dᴍᴏɴᴇʏ ѕᴘᴇɴᴛ ᴏɴ ѕʜᴏᴘ"
-      MATERIAL: "GOLD_NUGGET"
-      SLOT: 22
-      LORE:
-        - "&fClick to view ᴍᴏɴᴇʏ ѕᴘᴇɴᴛ ᴏɴ ѕʜᴏᴘ leaderboard"
-    MONEY_MADE:
-      TYPE: "moneyMade"
-      DISPLAY-NAME: "&#6BF18Dᴍᴏɴᴇʏ ᴍᴀᴅᴇ ᴏɴ /ѕᴇʟʟ"
-      MATERIAL: "IRON_NUGGET"
-      SLOT: 23
-      LORE:
-        - "&fClick to view ᴍᴏɴᴇʏ ᴍᴀᴅᴇ ᴏɴ /ѕᴇʟʟ leaderboard"
-
-# Progress Menu
-PROGRESS-MENU:
-  PROGRESS-BAR: "■"
-  LEVEL: [25000, 150000, 500000, 1000000, 5000000, 25000000, 250000000, 550000000, 850000000,
-          1000000000, 2000000000, 4000000000, 8000000000, 10000000000, 20000000000, 40000000000,
-          80000000000, 160000000000, 320000000000, 640000000000]
-  TITLE:
-    CROPS: "&8ᴄʀᴏᴘѕ ᴘʀᴏɢʀᴇѕѕ"
-    ORES: "&8ᴏʀᴇ ᴘʀᴏɢʀᴇѕѕ"
-    MOBS: "&8ᴍᴏʙ ᴅʀᴏᴘѕ ᴘʀᴏɢʀᴇѕѕ"
-    NATURAL: "&8ɴᴀᴛᴜʀᴀʟ ɪᴛᴇᴍѕ ᴘʀᴏɢʀᴇѕѕ"
-    ARMOR_AND_TOOLS: "&8ᴀʀᴍᴏʀ ᴀɴᴅ ᴛᴏᴏʟѕ ᴘʀᴏɢʀᴇѕѕ"
-    FISH: "&8ꜰɪѕʜ ᴘʀᴏɢʀᴇѕѕ"
-    BOOK: "&8ᴇɴᴄʜᴀɴᴛᴇᴅ ʙᴏᴏᴋ ᴘʀᴏɢʀᴇѕѕ"
-    POTIONS: "&8ᴘᴏᴛɪᴏɴѕ ᴘʀᴏɢʀᴇѕѕ"
-    BLOCKS: "&8ʙʟᴏᴄᴋѕ ᴘʀᴏɢʀᴇѕѕ"
-  TYPE-BUTTON:
-    TITLE:
-      CROPS: "&#6BF18Dᴄʀᴏᴘѕ"
-      ORES: "&#6BF18Dᴏʀᴇ"
-      MOBS: "&#6BF18Dᴍᴏʙ"
-      NATURAL: "&#6BF18Dɴᴀᴛᴜʀᴀʟ ɪᴛᴇᴍѕ"
-      ARMOR_AND_TOOLS: "&#6BF18Dᴀʀᴍᴏʀ ᴀɴᴅ ᴛᴏᴏʟѕ"
-      FISH: "&#6BF18Dꜰɪѕʜ"
-      BOOK: "&#6BF18Dᴇɴᴄʜᴀɴᴛᴇᴅ ʙᴏᴏᴋ"
-      POTIONS: "&#6BF18Dᴘᴏᴛɪᴏɴѕ"
-      BLOCKS: "&#6BF18Dʙʟᴏᴄᴋѕ"
-    LORE:
-      CROPS:
-        - "&7Sell crops and farming materials to"
-        - "&7upgrade your sell multiplier!"
-      ORES:
-        - "&7Sell ores and mining materials to"
-        - "&7upgrade your sell multiplier!"
-      MOBS:
-        - "&7Sell mob drops and combat materials to"
-        - "&7upgrade your sell multiplier!"
-      NATURAL:
-        - "&7Sell natural materials and trees to"
-        - "&7upgrade your sell multiplier!"
-      ARMOR_AND_TOOLS:
-        - "&7Sell armor and tools to"
-        - "&7upgrade your sell multiplier!"
-      FISH:
-        - "&7Sell fish and other fishing loot to"
-        - "&7upgrade your sell multiplier!"
-      BOOK:
-        - "&7Sell books and enchanted books to"
-        - "&7upgrade your sell multiplier!"
-      POTIONS:
-        - "&7Sell potions and brewing materials to"
-        - "&7upgrade your sell multiplier!"
-      BLOCKS:
-        - "&7Sell blocks and placeable items to"
-        - "&7upgrade your sell multiplier!"
-    MATERIAL:
-      CROPS: "WHEAT"
-      ORES: "DIAMOND"
-      MOBS: "BONE"
-      NATURAL: "OAK_LEAVES"
-      ARMOR_AND_TOOLS: "NETHERITE_HELMET"
-      FISH: "TROPICAL_FISH"
-      BOOK: "BOOK"
-      POTIONS: "BREWING_STAND"
-      BLOCKS: "BRICK"
-  WORKING-BUTTON:
-    TITLE: "&eᴡᴏʀᴋɪɴɢ"
-    MATERIAL: "YELLOW_STAINED_GLASS_PANE"
-    LORE:
-      - "{porcentage_level} &f{next_multiplier} {porcentage}%"
-      - "&7{current_earned}/{next_goal}"
-  COMPLETED-BUTTON:
-    TITLE: "&aᴄᴏᴍᴘʟᴇᴛᴇᴅ"
-    MATERIAL: "LIME_STAINED_GLASS_PANE"
-    LORE:
-      - "{porcentage_level} &f{next_multiplier} {porcentage}%"
-      - "&7{current_earned}/{next_goal}"
-
-# Sell Menu
-SELL-MENU:
-  TITLE: "&8ᴘʟᴀᴄᴇ ɪᴛᴇᴍѕ ɪɴ ʜᴇʀᴇ ᴛᴏ ѕᴇʟʟ"
-  MULTIPLIER-TITLE: "&8ѕᴇʟʟ ᴍᴜʟᴛɪᴘʟɪᴇʀѕ"
-  CROPS-BUTTON:
-    MATERIAL: "WHEAT"
-    TITLE: "&#6BF18Dᴄʀᴏᴘѕ"
-    LORE:
-      - "&7Sell crops and farming materials to"
-      - "&7upgrade your sell multiplier!"
-      - ""
-      - "&7Progress to &f{next_multiplier}"
-      - "{porcentage_level} &#6BF18D{porcentage}%"
-  ORES-BUTTON:
-    MATERIAL: "DIAMOND"
-    TITLE: "&#6BF18Dᴏʀᴇѕ"
-    LORE:
-      - "&7Sell ores and mining materials to"
-      - "&7upgrade your sell multiplier!"
-      - ""
-      - "&7Progress to &f{next_multiplier}"
-      - "{porcentage_level} &#6BF18D{porcentage}%"
-  MOBS-BUTTON:
-    MATERIAL: "BONE"
-    TITLE: "&#6BF18Dᴍᴏʙѕ"
-    LORE:
-      - "&7Sell mob drops and combat materials to"
-      - "&7upgrade your sell multiplier!"
-      - ""
-      - "&7Progress to &f{next_multiplier}"
-      - "{porcentage_level} &#6BF18D{porcentage}%"
-  NATURAL-BUTTON:
-    MATERIAL: "OAK_LEAVES"
-    TITLE: "&#6BF18Dɴᴀᴛᴜʀᴀʟ ɪᴛᴇᴍѕ"
-    LORE:
-      - "&7Sell natural materials and trees to"
-      - "&7upgrade your sell multiplier!"
-      - ""
-      - "&7Progress to &f{next_multiplier}"
-      - "{porcentage_level} &#6BF18D{porcentage}%"
-  ARMOR-AND-TOOLS-BUTTON:
-    MATERIAL: "NETHERITE_HELMET"
-    TITLE: "&#6BF18Dᴀʀᴍᴏʀ ᴀɴᴅ ᴛᴏᴏʟѕ"
-    LORE:
-      - "&7Sell armor and tools to"
-      - "&7upgrade your sell multiplier!"
-      - ""
-      - "&7Progress to &f{next_multiplier}"
-      - "{porcentage_level} &#6BF18D{porcentage}%"
-  FISH-BUTTON:
-    MATERIAL: "TROPICAL_FISH"
-    TITLE: "&#6BF18Dꜰɪѕʜ"
-    LORE:
-      - "&7Sell fish and other fishing loot to"
-      - "&7upgrade your sell multiplier!"
-      - ""
-      - "&7Progress to &f{next_multiplier}"
-      - "{porcentage_level} &#6BF18D{porcentage}%"
-  BOOK-BUTTON:
-    MATERIAL: "BOOK"
-    TITLE: "&#6BF18Dᴇɴᴄʜᴀɴᴛᴇᴅ ʙᴏᴏᴋ"
-    LORE:
-      - "&7Sell books and enchanted books to"
-      - "&7upgrade your sell multiplier!"
-      - ""
-      - "&7Progress to &f{next_multiplier}"
-      - "{porcentage_level} &#6BF18D{porcentage}%"
-  POTIONS-BUTTON:
-    MATERIAL: "BREWING_STAND"
-    TITLE: "&#6BF18Dᴘᴏᴛɪᴏɴѕ"
-    LORE:
-      - "&7Sell potions and brewing materials to"
-      - "&7upgrade your sell multiplier!"
-      - ""
-      - "&7Progress to &f{next_multiplier}"
-      - "{porcentage_level} &#6BF18D{porcentage}%"
-  BLOCKS-BUTTON:
-    MATERIAL: "BRICK"
-    TITLE: "&#6BF18Dʙʟᴏᴄᴋѕ"
-    LORE:
-      - "&7Sell blocks and placeable items to"
-      - "&7upgrade your sell multiplier!"
-      - ""
-      - "&7Progress to &f{next_multiplier}"
-      - "{porcentage_level} &#6BF18D{porcentage}%"
-
-WORTH-MENU:
-  TITLE: "&8ɪᴛᴇᴍ ᴘʀɪᴄᴇѕ"
-  FORMAT: "&7Worth: &a${price}"
-  SORT-BUTTON:
-    TITLE: "&aSort"
-    MATERIAL: "CAULDRON"
+      - "&7Click to cancel"
+  PLAYER-BUTTON:
+    TITLE: "&#00FC00{player}"
+    MATERIAL: "PLAYER_HEAD"
 
 TPA-CONFIRM-MENU:
   TITLE: "&8ᴄᴏɴꜰɪʀᴍ ᴛᴘᴀ {here}"
@@ -832,6 +764,38 @@ TPA-CONFIRM-MENU:
       MATERIAL: "FEATHER"
       LORE:
         - "&7NA East (&#0069D6${ping}ms&7)"
+
+AFK-MENU:
+  TITLE: "&8ᴀꜰᴋ ᴀʀᴇᴀѕ"
+  SIZE: 54
+  RANDOM-AFK-BUTTON:
+    DISPLAY-NAME: "&#00A4FCᴀꜰᴋ"
+    MATERIAL: "AMETHYST_BLOCK"
+    SLOT: 49
+    LORE: "&fClick to teleport to a random afk area"
+  AFK-BUTTON:
+    DISPLAY-NAME: "&#A303F9ᴀꜰᴋ #{name}"
+    MATERIAL: "ITEM_FRAME"
+    LORE:
+      - "&8{count}/200"
+      - "&7Click to go to this"
+      - "&7Afk zone area."
+
+SPAWN-MENU:
+  TITLE: "&8ѕᴘᴀᴡɴ ᴀʀᴇᴀѕ"
+  SIZE: 54
+  RANDOM-SPAWN-BUTTON:
+    DISPLAY-NAME: "&#00A4FCѕᴘᴀᴡɴ"
+    MATERIAL: "LIGHT_BLUE_GLAZED_TERRACOTTA"
+    SLOT: 49
+    LORE: "&fClick to teleport to a random spawn area"
+  SPAWN-BUTTON:
+    DISPLAY-NAME: "&#00A4FCѕᴘᴀᴡɴ #{name}"
+    MATERIAL: "ITEM_FRAME"
+    LORE:
+      - "&8{count}/200"
+      - "&7Click to go to this"
+      - "&7Spawn area."
 
 BOUNTIES-MENU:
   TITLE: "&8ʙᴏᴜɴᴛɪᴇѕ"
@@ -871,132 +835,26 @@ BOUNTY-CONFIRM-MENU:
     LORE:
       - "&7Click to confirm to add {amount} bounty!"
 
-SELL-HISTORY-MENU:
-  TITLE: "&8ѕᴇʟʟ ʜɪѕᴛᴏʀʏ"
-  SIZE: 54
-  MAX-ITEMS-PER-PAGE: 45
-  BUTTONS:
-    SORT:
-      MATERIAL: "ANVIL"
-      NAME: "&aSort"
-      LORE:
-        - "&fClick to sort"
-        - ""
-        - "&7({sort_state})"
-      SLOT: 49
-    MATERIAL-ITEM:
-      LORE:
-        - "&fTotal price: &a{price}"
-        - "&fTotal amount: {amount}"
-
-BILLFORD-MENU:
-  TITLE: "&8ʙɪʟʟꜰᴏʀᴅ"
-  SIZE: 54
-  TRADE-BUTTON:
-    MATERIAL:
-      NAME: "&aTrade with Billford"
-      LORE:
-        - ""
-  CONFIRM-TRADE-BUTTON:
-    MATERIAL: "HOPPER"
-    NAME: "&8ᴛʀᴀᴅᴇ"
+MEDIA-MENU:
+  TITLE: "&8ᴍᴇᴅɪᴀ ʀᴀɴᴋ"
+  SIZE: 27
+  MEDIA-BUTTON:
+    DISPLAY-NAME: "&dᴍᴇᴅɪᴀ ʀᴀɴᴋ"
+    MATERIAL: "PINK_DYE"
+    SLOT: 13
     LORE:
-      - "&fClick to confirm the trade"
+      - "&dRequirements: (only one needed)"
+      - "&d- &f25 average viewers on Stream"
+      - "&d- &f5k views on a YouTube Video"
+      - "&d- &f25k views on a TikTok"
+      - "&d- &f50k views on YouTube Short"
       - ""
-      - "&7(you need the items in your inventory)"
-
-PURCHASE-SHOP-MENU:
-  TITLE: "&8ᴄᴏɴꜰɪʀᴍᴀᴛɪᴏɴ ᴍᴇɴᴜ"
-  SIZE: 27
-  BUTTONS:
-    MAIN:
-      SLOT: 13
-      LORE:
-        MONEY: "&fʙᴜʏ ᴘʀɪᴄᴇ: &a${price}"
-        SHARD: "&fʙᴜʏ ᴘʀɪᴄᴇ: &5${price}x &lShards"
-        DEFAULT: "&fʙᴜʏ ᴘʀɪᴄᴇ: &a${price}"
-
-    CANCEL:
-      SLOT: 21
-      MATERIAL: "RED_STAINED_GLASS_PANE"
-      NAME: "&cᴄᴀɴᴄᴇʟ"
-      LORE: "&fᴄʟɪᴄᴋ ᴛᴏ ᴄᴀɴᴄᴇʟ"
-
-    CONFIRM:
-      SLOT: 23
-      MATERIAL: "LIME_STAINED_GLASS_PANE"
-      NAME: "&aᴄᴏɴꜰɪʀᴍ"
-      LORE: "&fᴄʟɪᴄᴋ ᴛᴏ ʙᴜʏ"
-
-    QUANTITY_ADJUST:
-      ADD:
-        MATERIAL: "LIME_STAINED_GLASS_PANE"
-        ADD_1:
-          SLOT: 15
-          NAME: "&aᴀᴅᴅ 1"
-          INCREMENT: 1
-        ADD_10:
-          SLOT: 16
-          NAME: "&aᴀᴅᴅ 10"
-          INCREMENT: 10
-        SET_64:
-          SLOT: 17
-          NAME: "&aѕᴇᴛ ᴛᴏ 64"
-          INCREMENT: 64
-
-      REMOVE:
-        MATERIAL: "RED_STAINED_GLASS_PANE"
-        REMOVE_1:
-          SLOT: 11
-          NAME: "&cʀᴇᴍᴏᴠᴇ 1"
-          DECREMENT: 1
-        REMOVE_10:
-          SLOT: 10
-          NAME: "&cʀᴇᴍᴏᴠᴇ 10"
-          DECREMENT: 10
-        REMOVE_64:
-          SLOT: 9
-          NAME: "&cʀᴇᴍᴏᴠᴇ 64"
-          DECREMENT: 64
-
-  RESTRICTIONS:
-    TOTEM_OF_UNDYING:
-      MAX_QUANTITY: 1
-      MIN_QUANTITY: 1
-      HIDE_QUANTITY_BUTTONS: true
-    ENDER_PEARL:
-      MAX_QUANTITY: 16
-      MIN_QUANTITY: 1
-    DEFAULT:
-      MAX_QUANTITY: 64
-      MIN_QUANTITY: 1
-
-  MESSAGES:
-    SUCCESS:
-      MONEY: "&7You bought &e{quantity} {item-name}&7 for &a${amount}"
-      SHARDS: "&7You bought {item-name}&7 for &5{amount} shards"
-    ERROR:
-      NO_MONEY: "&cʏᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ᴇɴᴏᴜɢʜ ᴍᴏɴᴇʏ."
-      NO_SHARDS: "&cʏᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ᴇɴᴏᴜɢʜ ѕʜᴀʀᴅѕ."
-      FULL_INVENTORY: "&cʏᴏᴜʀ ɪɴᴠᴇɴᴛᴏʀʏ ɪѕ ꜰᴜʟʟ."
-
-  SOUNDS:
-    SUCCESS: "ENTITY_EXPERIENCE_ORB_PICKUP"
-    ERROR: "ENTITY_VILLAGER_NO"
-
-PAY-CONFIRM-MENU:
-  TITLE: "&8ᴄᴏɴꜰɪʀᴍ ᴘᴀʏᴍᴇɴᴛ"
-  SIZE: 27
-  CONFIRM-BUTTON:
-    TITLE: "&#00FC00ᴄᴏɴꜰɪʀᴍ"
-    MATERIAL: "LIME_STAINED_GLASS_PANE"
-    LORE:
-      - "&7Click to confirm to pay {amount}!"
-  CANCEL-BUTTON:
-    TITLE: "&#FC0000ᴄᴀɴᴄᴇʟ"
-    MATERIAL: "RED_STAINED_GLASS_PANE"
-    LORE:
-      - "&7Click to cancel"
+      - "&dReminders:"
+      - "&8- &7Must have the IP on screen"
+      - "&8- &7Must be from the new season"
+      - "&8- &7Create ticket in discord for the rank"
+      - "&8- &7It lasts 90 days and has all top ranks perks"
+      - ""
 
 SERVER-INFO-MENU:
   TITLE: "&8ѕᴇʀᴠᴇʀ ɪɴꜰᴏ"
@@ -1017,7 +875,6 @@ SERVER-INFO-MENU:
       MATERIAL: "GOLD_INGOT"
       SLOT: 11
       NAME: "&#00A4FCEconomy"
-      COMMAND: "sell"
       LORE:
         - "&fYou can earn server money by selling items in game."
         - "&fThis allows you to buy better things like armor and pvp gear."
@@ -1027,7 +884,6 @@ SERVER-INFO-MENU:
       MATERIAL: "KNOWLEDGE_BOOK"
       SLOT: 12
       NAME: "&#00A4FCRules"
-      COMMAND: "rules"
       LORE:
         - "&fTo keep the community safe, everyone must"
         - "&ffollow the rules or be subject to punishment."
@@ -1037,7 +893,6 @@ SERVER-INFO-MENU:
       MATERIAL: "CLOCK"
       SLOT: 13
       NAME: "&#00A4FCLeaderboards"
-      COMMAND: "leaderboards"
       LORE:
         - "&fLook at the top players and"
         - "&fcompete for the top spots."
@@ -1047,7 +902,6 @@ SERVER-INFO-MENU:
       MATERIAL: "AMETHYST_SHARD"
       SLOT: 14
       NAME: "&#00A4FCAFK Shards"
-      COMMAND: "afk"
       LORE:
         - "&fYou can earn shards by sitting idle, then"
         - "&fbuy things like spawners, keys, and more."
@@ -1057,7 +911,6 @@ SERVER-INFO-MENU:
       MATERIAL: "GRAY_DYE"
       SLOT: 15
       NAME: "&#00A4FCSettings"
-      COMMAND: "settings"
       LORE:
         - "&fYou can change certain settings"
         - "&fbased on your preferences."
@@ -1067,7 +920,6 @@ SERVER-INFO-MENU:
       MATERIAL: "OAK_SAPLING"
       SLOT: 16
       NAME: "&#00A4FCRandom Teleport"
-      COMMAND: "rtp"
       LORE:
         - "&fUse the random teleport to"
         - "&fget far away from spawn."
@@ -1125,65 +977,3 @@ RULES-MENU:
         - "&#00A4FC● &fNo Lying to Staff Members"
         - "&#00A4FC● &fReport All Bugs, Glitches, and Cheaters"
         - "  &fin the discord &&#F97603(discord.gg/donutsmp)"
-
-AFK-MENU:
-  TITLE: "&8ᴀꜰᴋ ᴀʀᴇᴀѕ"
-  SIZE: 54
-  RANDOM-BUTTON:
-    SLOT: 49
-    MATERIAL: "AMETHYST_BLOCK"
-    DISPLAY-NAME: "&#A303F9ᴀꜰᴋ"
-    LORE:
-      - "&fClick to teleport to a random afk area"
-  AREAS:
-    "1":
-      SLOT: 0
-      MATERIAL: "ITEM_FRAME"
-      DISPLAY-NAME: "&#A303F9ᴀꜰᴋ #1"
-      LORE:
-        - "&8{players}/200"
-        - "&7Click to got to this"
-        - "&7Afk zone area."
-      CUBOID: "afk1"
-      LOCATION: 1
-    "2":
-      SLOT: 1
-      MATERIAL: "ITEM_FRAME"
-      DISPLAY-NAME: "&#A303F9ᴀꜰᴋ #2"
-      LORE:
-        - "&8{players}/200"
-        - "&7Click to got to this"
-        - "&7Afk zone area."
-      CUBOID: "afk2"
-      LOCATION: 2
-
-SPAWN-MENU:
-  TITLE: "&8ѕᴘᴀᴡɴ ᴀʀᴇᴀѕ"
-  SIZE: 54
-  RANDOM-BUTTON:
-    SLOT: 49
-    MATERIAL: "LIGHT_BLUE_GLAZED_TERRACOTTA"
-    DISPLAY-NAME: "&#00A4FCѕᴘᴀᴡɴ"
-    LORE:
-      - "&fClick to teleport to a random spawn area"
-  AREAS:
-    "1":
-      SLOT: 0
-      MATERIAL: "ITEM_FRAME"
-      DISPLAY-NAME: "&#00A4FCѕᴘᴀᴡɴ #1"
-      LORE:
-        - "&8{players}/200"
-        - "&7Click to got to this"
-        - "&7Spawn area."
-      CUBOID: "spawn1"
-      LOCATION: 1
-    "2":
-      SLOT: 1
-      MATERIAL: "ITEM_FRAME"
-      DISPLAY-NAME: "&#00A4FCѕᴘᴀᴡɴ #2"
-      LORE:
-        - "&8{players}/200"
-        - "&7Click to got to this"
-        - "&7Spawn area."
-      CUBOID: "spawn2"
-      LOCATION: 2
