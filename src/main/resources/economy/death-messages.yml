@@ -1,5 +1,5 @@
 SETTINGS:
-  RADIUS: true
+  RADIUS: false
   CHUNKS: 5
 
 MESSAGES:
