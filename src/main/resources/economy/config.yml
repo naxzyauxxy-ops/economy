@@ -1,0 +1,291 @@
+LOCATIONS:
+  SPAWN-LOCATION: ""
+  AFK-LOCATION: ""
+
+AFK-SYSTEM:
+  ENABLED: true
+  TIME: 180 # In seconds (3 minutes)
+  SPAWN-CUBOID-NAME: "spawn"
+  MESSAGE: "&7You have been moved to the AFK area for being inactive in the spawn."
+
+# Settings
+SETTINGS:
+  DEBUG: false
+  CHAT-FORMAT: true
+  CHAINMAIL-ON-RESPAWN: true
+  SPAWN-MENU: true
+  AFK-MENU: true
+  HOME-DEFAULT: 2 # Default slots
+  SHARDS-PER-KILL: 1
+  SHARDS-KILL-MESSAGE: "&#A303F9+{shards} Shard"
+  MONEY-PER-DEFAULT: 1000.0
+  SELL-MESSAGE: "&a+$%price%"
+  # Player Settings
+  MOB-SPAWN-RADIUS: 50
+  PHANTOM-SPAWN-RADIUS: 40
+
+CHAT-FORMAT:
+  CHAT: "&f%prefix%%player%&7: &f%message%"
+  HOVER-LORE:
+    - "%prefix%%player%"
+    - "&7&m----------"
+    - "&#00FC00&l$ &fᴍᴏɴᴇʏ &#00FC00%money%"
+    - "&#FC0000⚔ &fᴋɪʟʟѕ &#FC0000%kills%"
+    - "&#FCE300⌚ &fᴘʟᴀʏᴛɪᴍᴇ &#FCE300%playtime%"
+    - "&#F97603☠ &fᴅᴇᴀᴛʜѕ &#F97603%deaths%"
+    - "&#A303F9★ &fѕʜᴀʀᴅѕ &#A303F9%shards%"
+    - "&7&m----------"
+    - "&7ᴄʟɪᴄᴋ ᴛᴏ ᴠɪᴇᴡ ѕᴛᴀᴛѕ"
+
+WORTH-LORE:
+  ENABLED: true
+  FORMAT: "&7Worth: &a$%price%"
+
+END-CRYSTAL:
+  ENABLED: false
+  DAMAGE: 2.0
+
+RESPAWN-ANCHOR:
+  ENABLED: false
+  DAMAGE: 2.0
+
+# Lunar client modules
+LUNAR-CLIENT:
+  RICH-PRESENCE:
+    ENABLED: true
+    UPDATE: 1 # In minutes
+    PLAYER-STATE: "Playing"
+    GAME-STATE: "Playing"
+    GAME-NAME: "Economy"
+    VARIANT: "%economy_username% ($%economy_nicestMoney%)"
+    WORLD-NAME: "Economy"
+  TEAM-VIEW:
+    ENABLED: true
+    UPDATE: 20 # In ticks: 20 = 1 sec
+
+SHARDS:
+  EVERY: 1 # In minutes
+  AMOUNT: 1 # shards
+  COUNTDOWN: "&7Next shard in &#A303F9%time%s"
+  RECEIVED: "&#A303F9+%amount% Shard"
+  EVERYWHERE:
+    ENABLED: true
+    EVERY: 3
+    AMOUNT: 1
+    EXCLUDED-WORLDS:
+      - "duels"
+  BOOSTER-MULTIPLIER: 4 # Amethyst Potion
+
+KEY-ALL:
+  ENABLED: true
+  EVERY: 60 # In minutes
+  COMMANDS:
+    - ""
+  MESSAGE:
+    - ""
+    - "&aYou received a reward!"
+    - "&#ff0000Thanks for playing on our server!"
+    - ""
+
+TEAM:
+  NAME-MIN-LENGTH: 3
+  NAME-MAX-LENGTH: 5
+  LIMIT-MEMBERS: 10
+
+LEADERBOARD:
+  UPDATE: 10 # In minutes
+  NPC-REFRESH: 1 # In minutes
+
+TABLIST:
+  ENABLED: true
+  LUCKPERMS-PRIORITY: true
+  SHOW-TEAM-NAME: true
+  HEADER: "&#0069d6&lE&#0374da&lc&#067fdf&lo&#0a8be3&ln&#0d96e7&lo&#10a1ec&lm&#13acf0&ly&#17b8f4&lS&#1ac3f9&lM&#1dcefd&lP"
+  FOOTER: ""
+
+CLEAR-LAG:
+  ENABLED: true
+  EVERY: 5 # In minutes
+  ANIMALS: true
+  MONSTERS: true
+  DROPPED-ITEMS: true
+  EXCLUDED-WORLDS:
+    - "duels"
+
+COMBAT-MANAGER:
+  ENABLED: true
+  COOLDOWN: 16 # In seconds
+  ACTION-BAR: "&fCombat: &b${time}s"
+  # Get combat on:
+  ENDER-CRYSTAL: true
+  ENDER-PEARL: true
+  RESPAWN-ANCHOR: true
+  ANTI-STASIS-CHAMBER:
+    ENABLED: true
+    MAX-DISTANCE: 500
+    PREVENT-WORLD-CHANGE: true
+  BLOCK-MESSAGE: "&cYou can't use this command in your current status."
+  BLOCK-COMMANDS:
+    - "/spawn"
+    - "/afk"
+    - "/rtp"
+    - "/homes"
+    - "/tpa"
+  EXCLUDED-WORLDS:
+    - "duels"
+
+RTP-ZONE:
+  ENABLED: true
+  EVERY: 30 # In seconds
+  TITLE: "&c&lʀᴛᴘ ᴢᴏɴᴇ"
+  SUB-TITLE: "&fTeleporting in %countdown%"
+  WORLD:
+    NAME: "world"
+    MIN-RADIUS: 500
+    MAX-RADIUS: 2000
+
+TELEPORT-COOLDOWN:
+  HOME: 5 # In seconds
+  TEAM-HOME: 5
+  SPAWN: 5
+  AFK: 5
+  TPA: 5
+  WARP: 5
+  RTP: 5
+
+BOUNTY:
+  EXCLUDED-WORLDS:
+    - "duels"
+
+AMETHYST-TOOLS:
+  EXCLUDED-WORLDS:
+    - "duels"
+  PICKAXE:
+    PARTICLE: 
+      NAME: "FALLING_DUST"
+      MATERIAL: "PURPLE_CONCRETE_POWDER"
+      AMOUNT: 10
+    DISABLED-BLOCKS:
+      - "GRASS_BLOCK"
+      - "DIRT_PATH"
+      - "DIRT"
+      - "COARSE_DIRT"
+      - "ROOTED_DIRT"
+      - "CLAY"
+      - "FARMLAND"
+      - "SAND"
+      - "RED_SAND"
+      - "GRAVEL"
+      - "SPAWNER"
+    NAME: "&#A303F9ᴀᴍᴇᴛʜʏѕᴛ ᴅʀɪʟʟ"
+    LORE:
+      - "&79 Blocks Per Break"
+      - "&8Self Destruct"
+      - "&8{time}"
+    ENCHANTMENTS:
+      - "MENDING:1"
+      - "EFFICIENCY:5"
+      - "UNBREAKING:3"
+  AXE:
+    PARTICLE:
+      NAME: "FALLING_DUST"
+      MATERIAL: "PURPLE_CONCRETE_POWDER"
+      AMOUNT: 10
+    NAME: "&#A303F9ᴀᴍᴇᴛʜʏѕᴛ ᴛʀᴇᴇ ᴄʜᴏᴘᴘᴇʀ"
+    LORE:
+      - "&7Breaks Trees Instantly"
+      - "&8Self Destruct"
+      - "&8{time}"
+    ENCHANTMENTS:
+      - "MENDING:1"
+      - "EFFICIENCY:5"
+      - "UNBREAKING:3"
+      - "SILK_TOUCH:1"
+  SELLAXE:
+    PARTICLE:
+      NAME: "FALLING_DUST"
+      MATERIAL: "PURPLE_CONCRETE_POWDER"
+      AMOUNT: 10
+    NAME: "&#A303F9ᴀᴍᴇᴛʜʏѕᴛ ѕᴇʟʟ ᴀxᴇ"
+    LORE:
+      - "&7Instantly Sells All Items in A Chest"
+      - "&8Self Destruct"
+      - "&8{time}"
+    ENCHANTMENTS:
+      - "MENDING:1"
+      - "EFFICIENCY:5"
+      - "UNBREAKING:3"
+  SHOVEL:
+    PARTICLE:
+      NAME: "FALLING_DUST"
+      MATERIAL: "PURPLE_CONCRETE_POWDER"
+      AMOUNT: 10
+    ALLOWED-BLOCKS:
+      - "GRASS_BLOCK"
+      - "DIRT_PATH"
+      - "DIRT"
+      - "COARSE_DIRT"
+      - "ROOTED_DIRT"
+      - "CLAY"
+      - "FARMLAND"
+      - "SAND"
+      - "RED_SAND"
+      - "GRAVEL"
+    NAME: "&#A303F9ᴀᴍᴇᴛʜʏѕᴛ ѕʜᴏᴠᴇʟ"
+    LORE:
+      - "&79 Blocks Per Break"
+      - "&8Self Destruct"
+      - "&8{time}"
+    ENCHANTMENTS:
+      - "MENDING:1"
+      - "EFFICIENCY:5"
+      - "UNBREAKING:3"
+  BUCKET:
+    PARTICLE:
+      NAME: "FALLING_DUST"
+      MATERIAL: "PURPLE_CONCRETE_POWDER"
+      AMOUNT: 10
+    NAME: "&#A303F9ᴀᴍᴇᴛʜʏѕᴛ ʙᴜᴄᴋᴇᴛ"
+    LORE:
+      - "&7Drains 27 Water At Once"
+      - "&8Self Destruct"
+      - "&8{time}"
+    ENCHANTMENTS: []
+  BOOSTER:
+    PARTICLE:
+      NAME: "FALLING_DUST"
+      MATERIAL: "PURPLE_CONCRETE_POWDER"
+      AMOUNT: 10
+    NAME: "&#A303F9ѕʜᴀʀᴅ ʙᴏᴏѕᴛᴇʀ"
+    LORE:
+      - "&74x Shard Production for 24 hours"
+      - "&8Self Destruct"
+      - "&8{time}"
+    ENCHANTMENTS: []    
+
+COMMANDS:
+  BOUNTY: true
+  CUBOID: true
+  AFK: true
+  SHARDS: true
+  WARP: true
+  TEAM: true
+  BILLFORD: true
+  HOME: true # disables everything related with home commands
+  LEADERBOARDS: true
+  NIGHT-VISION: true
+  PHANTOM: true
+  RTP: true
+  SELL: true # disables everything related with sell (worth, sellhistory, etc)
+  SETTINGS: true
+  SHOP: true
+  SOCIAL: true # disables discord, twitter, media and store commands
+  SPAWN: true
+  STATS: true
+  TPA: true # disables everything related with tpa system
+  TPAUTO: true
+  RULES: true
+  HELP: true
+  SHARD_PAY: false
+  FINDPLAYER: true
+  SHARDPAY: false
