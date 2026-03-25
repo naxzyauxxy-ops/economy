@@ -1,23 +1,18 @@
-DATABASE: SQLITE
+STORAGE_TYPE: "MONGO" # Options: MONGO, MYSQL
 
-MONGODB:
-  URI: ""
-  ADDRESS: 127.0.0.1
-  PORT: 27017
-  DATABASE: Economy
-  AUTHENTICATION:
-    ENABLED: false
-    USERNAME: admin
-    PASSWORD: pass
-    DATABASE: admin
+MONGO:
+  URI: "mongodb://localhost:27017"
+  DATABASE: "voyager"
 
 MYSQL:
-  HOST: 127.0.0.1
+  HOST: "localhost"
   PORT: 3306
-  DATABASE: economy
-  USER: root
+  DATABASE: "voyager"
+  USERNAME: "root"
   PASSWORD: ""
-  PARAMS: useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+  USE_SSL: false
 
-SQLITE:
-  FILE: plugins/Economy/data/economy.db
+REDIS:
+  HOST: "localhost"
+  PORT: 6379
+  PASSWORD: ""
