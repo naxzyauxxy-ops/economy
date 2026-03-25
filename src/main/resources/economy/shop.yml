@@ -30,37 +30,12 @@ CATEGORIES:
       - "&fClick to view the food shop"
     OPEN-MENU: "{food-menu}"
   SHARD:
-    ENABLED: true
     MATERIAL: AMETHYST_SHARD
     DISPLAY-NAME: "&#6BF18Dѕʜᴀʀᴅ ѕʜᴏᴘ"
     SLOT: 15
     LORE:
       - "&fClick to view the shard shop"
     OPEN-MENU: "{shard-menu}"
-  EXTRA-1:
-    ENABLED: false
-    MATERIAL: DIAMOND_ORE
-    DISPLAY-NAME: "&#6BF18DExtra Menu (1)"
-    SLOT: 22
-    LORE:
-      - "&fClick to view extra menu"
-    OPEN-MENU: "{extra-1-menu}"
-  EXTRA-2:
-    ENABLED: false
-    MATERIAL: IRON_ORE
-    DISPLAY-NAME: "&#6BF18DExtra Menu (2)"
-    SLOT: 23
-    LORE:
-      - "&fClick to view extra menu"
-    OPEN-MENU: "{extra-2-menu}"
-  EXTRA-3:
-    ENABLED: false
-    MATERIAL: GOLD_ORE
-    DISPLAY-NAME: "&#6BF18DExtra Menu (3)"
-    SLOT: 24
-    LORE:
-      - "&fClick to view extra menu"
-    OPEN-MENU: "{extra-3-menu}"
 
 # End Shop Menu
 END-MENU:
@@ -480,50 +455,74 @@ SHARD-MENU:
     COMMAND: "spawner give {username} iron_golem {amount}"
     GIVE-ITEM: false
 
-# Extra Shop Menu (1)
-EXTRA-1-MENU:
-  TITLE: "&8ᴇxᴛʀᴀ - ѕʜᴏᴘ"
-  SIZE: 27
-  BACK-BUTTON-SLOT: 18
-  DIRT-ITEM:
-    CURRENCY: MONEY
-    MATERIAL: "DIRT"
-    DISPLAY-NAME: "&fDirt"
-    SLOT: 9
-    PRICE-PER-UNIT: 150.0
-    LORE:
-      - "&fBuy price: &a$150"
-
-# Extra Shop Menu (2)
-EXTRA-2-MENU:
-  TITLE: "&8ᴇxᴛʀᴀ - ѕʜᴏᴘ"
-  SIZE: 27
-  BACK-BUTTON-SLOT: 18
-  DIRT-ITEM:
-    CURRENCY: MONEY
-    MATERIAL: "DIRT"
-    DISPLAY-NAME: "&fDirt"
-    SLOT: 9
-    PRICE-PER-UNIT: 150.0
-    LORE:
-      - "&fBuy price: &a$150"
-
-# Extra Shop Menu (3)
-EXTRA-3-MENU:
-  TITLE: "&8ᴇxᴛʀᴀ - ѕʜᴏᴘ"
-  SIZE: 27
-  BACK-BUTTON-SLOT: 18
-  DIRT-ITEM:
-    CURRENCY: MONEY
-    MATERIAL: "DIRT"
-    DISPLAY-NAME: "&fDirt"
-    SLOT: 9
-    PRICE-PER-UNIT: 150.0
-    LORE:
-      - "&fBuy price: &a$150"
-
 BACK-BUTTON:
   MATERIAL: "RED_STAINED_GLASS_PANE"
   DISPLAY-NAME: "&cʙᴀᴄᴋ"
   LORE:
     - "&fClick to return"
+
+PURCHASE-SHOP-MENU:
+  TITLE: "&8ᴄᴏɴꜰɪʀᴍᴀᴛɪᴏɴ ᴍᴇɴᴜ"
+  SIZE: 27
+  BUTTONS:
+    MAIN:
+      SLOT: 13
+      LORE:
+        MONEY: "&fʙᴜʏ ᴘʀɪᴄᴇ: &a${price}"
+        SHARD: "&fʙᴜʏ ᴘʀɪᴄᴇ: &5${price}x &lShards"
+        DEFAULT: "&fʙᴜʏ ᴘʀɪᴄᴇ: &a${price}"
+
+    CANCEL:
+      SLOT: 21
+      MATERIAL: "RED_STAINED_GLASS_PANE"
+      NAME: "&cᴄᴀɴᴄᴇʟ"
+      LORE: "&fᴄʟɪᴄᴋ ᴛᴏ ᴄᴀɴᴄᴇʟ"
+
+    CONFIRM:
+      SLOT: 23
+      MATERIAL: "LIME_STAINED_GLASS_PANE"
+      NAME: "&aᴄᴏɴꜰɪʀᴍ"
+      LORE: "&fᴄʟɪᴄᴋ ᴛᴏ ʙᴜʏ"
+
+    QUANTITY_ADJUST:
+      ADD:
+        MATERIAL: "LIME_STAINED_GLASS_PANE"
+        ADD_1:
+          SLOT: 15
+          NAME: "&#00FC00Add 1"
+          INCREMENT: 1
+        ADD_10:
+          SLOT: 16
+          NAME: "&#00FC00Add 10"
+          INCREMENT: 10
+        SET_64:
+          SLOT: 17
+          NAME: "&#00FC00Set to 64"
+          INCREMENT: 64
+
+      REMOVE:
+        MATERIAL: "RED_STAINED_GLASS_PANE"
+        REMOVE_1:
+          SLOT: 11
+          NAME: "&cRemove 1"
+          DECREMENT: 1
+        REMOVE_10:
+          SLOT: 10
+          NAME: "&cRemove 10"
+          DECREMENT: 10
+        REMOVE_64:
+          SLOT: 9
+          NAME: "&cRemove 64"
+          DECREMENT: 64
+
+  RESTRICTIONS:
+    TOTEM_OF_UNDYING:
+      MAX_QUANTITY: 1
+      MIN_QUANTITY: 1
+      HIDE_QUANTITY_BUTTONS: true
+    ENDER_PEARL:
+      MAX_QUANTITY: 16
+      MIN_QUANTITY: 1
+    DEFAULT:
+      MAX_QUANTITY: 64
+      MIN_QUANTITY: 1
