@@ -1,7 +1,6 @@
-cuy-project/
-├── .github/
-│   └── workflows/
-│       └── main.yml   ✓
-├── src/
-├── pom.xml
-└── ...
+cd cuy-project
+git init
+git add .
+git commit -m "initial commit"
+git remote add origin https://github.com/YOUR/REPO.git
+git push -u origin main
