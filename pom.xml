@@ -48,7 +48,7 @@
             <scope>provided</scope>
         </dependency>
 
-        <!-- packetevents -->
+        <!-- PacketEvents -->
         <dependency>
             <groupId>com.github.retrooper.packetevents</groupId>
             <artifactId>spigot</artifactId>
@@ -157,6 +157,7 @@
 
     <build>
         <plugins>
+            <!-- Kotlin Compilation -->
             <plugin>
                 <groupId>org.jetbrains.kotlin</groupId>
                 <artifactId>kotlin-maven-plugin</artifactId>
@@ -167,12 +168,16 @@
                         <goals><goal>compile</goal></goals>
                         <configuration>
                             <sourceDirs>
+                                <!-- Pointing to standard Kotlin dir -->
+                                <sourceDir>${project.basedir}/src/main/kotlin</sourceDir>
                                 <sourceDir>${project.basedir}/src/main/java</sourceDir>
                             </sourceDirs>
                         </configuration>
                     </execution>
                 </executions>
             </plugin>
+            
+            <!-- Maven Shade Plugin (Bundling & Relocating) -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
@@ -181,6 +186,38 @@
                     <execution>
                         <phase>package</phase>
                         <goals><goal>shade</goal></goals>
+                        <configuration>
+                            <createDependencyReducedPom>false</createDependencyReducedPom>
+                            <relocations>
+                                <!-- Prevent classpath conflicts by relocating libraries -->
+                                <relocation>
+                                    <pattern>kotlin</pattern>
+                                    <shadedPattern>me.pi3ro.cuy.libs.kotlin</shadedPattern>
+                                </relocation>
+                                <relocation>
+                                    <pattern>revxrsal.commands</pattern>
+                                    <shadedPattern>me.pi3ro.cuy.libs.lamp</shadedPattern>
+                                </relocation>
+                                <relocation>
+                                    <pattern>com.zaxxer.hikari</pattern>
+                                    <shadedPattern>me.pi3ro.cuy.libs.hikari</shadedPattern>
+                                </relocation>
+                                <relocation>
+                                    <pattern>com.github.benmanes.caffeine</pattern>
+                                    <shadedPattern>me.pi3ro.cuy.libs.caffeine</shadedPattern>
+                                </relocation>
+                            </relocations>
+                            <filters>
+                                <filter>
+                                    <artifact>*:*</artifact>
+                                    <excludes>
+                                        <exclude>META-INF/*.SF</exclude>
+                                        <exclude>META-INF/*.DSA</exclude>
+                                        <exclude>META-INF/*.RSA</exclude>
+                                    </excludes>
+                                </filter>
+                            </filters>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>
